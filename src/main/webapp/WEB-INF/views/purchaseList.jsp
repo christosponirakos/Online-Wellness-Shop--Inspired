@@ -85,7 +85,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <c:forEach items="${purchases}" var="purchases">
+                                <c:forEach items="${purchases}" var="purchase">
                                     <tr>
                                         <td scope="col" class="text-center">${purchase.id}</td>
                                         <td scope="col" class="text-center">${purchase.customerId}</td>
