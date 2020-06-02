@@ -25,31 +25,29 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author ticho
  */
-
 @Entity
 @Transactional
 @Table(name = "purchases", catalog = "wellness", schema = "")
 
-public class Purchase implements Serializable{
-    
-    private static final long serialVersionUID=1L;
-    
+public class Purchase implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional=false)
+    @Basic(optional = false)
     @Column(nullable = false)
     private int id;
-    
+
     @Basic(optional = false)
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date date ;
-    
-    @Basic(optional=false)
-    
-    @Column(name = "customer_id", nullable = false)
-    private int customerId;
-    
+    private Date date;
+
+    @Basic(optional = false)
+    @Column(name = "user_id", nullable = false)
+    private int userId;
+
     @Basic(optional = false)
     @NotNull
     @Column(nullable = false)
@@ -62,9 +60,10 @@ public class Purchase implements Serializable{
         this.id = id;
     }
 
-    public Purchase(int id, Date date, short pending) {
+    public Purchase(int id, Date date, int userId, short pending) {
         this.id = id;
         this.date = date;
+        this.userId = userId;
         this.pending = pending;
     }
 
@@ -92,22 +91,21 @@ public class Purchase implements Serializable{
         this.pending = pending;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
-    
-    
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + this.id;
-        hash = 41 * hash + Objects.hashCode(this.date);
-        hash = 41 * hash + this.pending;
+        int hash = 7;
+        hash = 29 * hash + this.id;
+        hash = 29 * hash + Objects.hashCode(this.date);
+        hash = 29 * hash + this.userId;
+        hash = 29 * hash + this.pending;
         return hash;
     }
 
@@ -126,6 +124,9 @@ public class Purchase implements Serializable{
         if (this.id != other.id) {
             return false;
         }
+        if (this.userId != other.userId) {
+            return false;
+        }
         if (this.pending != other.pending) {
             return false;
         }
@@ -137,14 +138,7 @@ public class Purchase implements Serializable{
 
     @Override
     public String toString() {
-        return "Purchase{" + "id=" + id + ", date=" + date + ", pending=" + pending + '}';
+        return "Purchase{" + "id=" + id + ", date=" + date + ", userId=" + userId + ", pending=" + pending + '}';
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
