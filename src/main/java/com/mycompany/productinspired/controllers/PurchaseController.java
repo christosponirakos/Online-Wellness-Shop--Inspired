@@ -1,6 +1,5 @@
 package com.mycompany.productinspired.controllers;
 
-
 import com.mycompany.productinspired.entities.Purchase;
 import com.mycompany.productinspired.services.IPurchaseService;
 import java.util.List;
@@ -10,23 +9,19 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 @Controller
 @RequestMapping("/purchases")
 public class PurchaseController {
-    
-   
 
-    
     @Autowired
     IPurchaseService purchaseService;
-    
-     @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
+
+    @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
     public String listAllTrainers(ModelMap view) {
         List<Purchase> purchases = purchaseService.findAllPurchasess();
         view.addAttribute("purchases", purchases);
-      
+
         return ("purchaseList");
     }
-    
+
 }
