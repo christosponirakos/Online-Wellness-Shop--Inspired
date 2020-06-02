@@ -7,8 +7,7 @@
         <link href="<c:url value='/static/css/styles.css' />" type="text/css" rel="stylesheet"></link>
        
        <link href="<c:url value='/resources/css/styles.css' />" rel="stylesheet"></link>
-      <!-- <script src="<c:url value="https://use.fontawesome.com/releases/v5.12.1/js/all.js"/>"</script> SHOWS BLANK PAGE?--> 
-        
+             
         <title>Products' List</title>
         <style>
             
@@ -151,7 +150,7 @@ body, .form-control{
                                         <td scope="col" class="text-center">${product.details}</td>
 
                                         <td align="right">
-                                            <a href="<c:url value='${detailsULR}/${product.id}' />" class="btn btn-warning">
+<!--                                            <a href="<c:url value='${detailsULR}/${product.productId}' />" class="btn btn-warning">-->
                                                 <span class="fa fa-plus"></span> View details
                                             </a>
                                             
