@@ -184,6 +184,6 @@ body, .form-control{
 
 
     <%@include file="footer.jsp" %>
-            <%@include file="scripts.jsp" %>
+            <%@include file="scripts.js" %>
     </body>
 </html>
