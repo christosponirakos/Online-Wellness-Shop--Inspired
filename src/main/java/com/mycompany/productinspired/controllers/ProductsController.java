@@ -16,7 +16,7 @@ public class ProductsController {
     @Autowired
     IProductsService productsService;
 
-    @RequestMapping(value = {"/", "/productsList"}, method = RequestMethod.GET)
+    @RequestMapping(value = { "/productsList"}, method = RequestMethod.GET)
     public String getAllProducts(ModelMap view) {
         List<Product> products = productsService.getAllProducts();
         view.addAttribute("products", products);

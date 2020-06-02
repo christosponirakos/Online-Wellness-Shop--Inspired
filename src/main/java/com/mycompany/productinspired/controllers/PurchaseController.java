@@ -22,7 +22,7 @@ public class PurchaseController {
     @Autowired
     IPurchaseService purchaseService;
     
-     @RequestMapping(value = {"/", "/purchasesList"}, method = RequestMethod.GET)
+     @RequestMapping(value = { "/purchasesList"}, method = RequestMethod.GET)
     public String listAllTrainers(ModelMap view) {
         List<Purchase> purchases = purchaseService.findAllPurchasess();
         view.addAttribute("purchases", purchases);
