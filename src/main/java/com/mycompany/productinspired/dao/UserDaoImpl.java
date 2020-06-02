@@ -14,5 +14,12 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements IUserDao 
         return (List<User>) criteria.list();
     }
    
-    
+    @Override
+    public User findById(int id) {
+          User user = getByKey(id);
+        if (user != null) {
+            return user;
+        }
+        return null;
+    }
 }

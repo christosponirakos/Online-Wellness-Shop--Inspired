@@ -50,5 +50,11 @@ public class PurchaseServiceImpl implements IPurchaseService {
     public boolean savePurchase(Purchase purchase) {
           return dao.savePurchase(purchase);
     }
+
+    @Override
+    public List<Purchase> getPurchasesForUserById(int id) {
+        return dao.getPurchasesForUserById(id);
+    }
+    
     
 }

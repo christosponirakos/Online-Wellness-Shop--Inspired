@@ -14,6 +14,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -45,8 +47,11 @@ public class Purchase implements Serializable {
     private Date date;
 
     @Basic(optional = false)
-    @Column(name = "user_id", nullable = false)
-    private int userId;
+    @NotNull
+//    @Column(name = "user_id", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Basic(optional = false)
     @NotNull
@@ -60,10 +65,10 @@ public class Purchase implements Serializable {
         this.id = id;
     }
 
-    public Purchase(int id, Date date, int userId, short pending) {
+    public Purchase(int id, Date date, User user, short pending) {
         this.id = id;
         this.date = date;
-        this.userId = userId;
+        this.user = user;
         this.pending = pending;
     }
 
@@ -91,21 +96,21 @@ public class Purchase implements Serializable {
         this.pending = pending;
     }
 
-    public int getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + this.id;
-        hash = 29 * hash + Objects.hashCode(this.date);
-        hash = 29 * hash + this.userId;
-        hash = 29 * hash + this.pending;
+        hash = 89 * hash + this.id;
+        hash = 89 * hash + Objects.hashCode(this.date);
+        hash = 89 * hash + Objects.hashCode(this.user);
+        hash = 89 * hash + this.pending;
         return hash;
     }
 
@@ -124,7 +129,7 @@ public class Purchase implements Serializable {
         if (this.id != other.id) {
             return false;
         }
-        if (this.userId != other.userId) {
+        if (this.user != other.user) {
             return false;
         }
         if (this.pending != other.pending) {
@@ -138,7 +143,7 @@ public class Purchase implements Serializable {
 
     @Override
     public String toString() {
-        return "Purchase{" + "id=" + id + ", date=" + date + ", userId=" + userId + ", pending=" + pending + '}';
+        return "Purchase{" + "id=" + id + ", date=" + date + ", userId=" + user + ", pending=" + pending + '}';
     }
 
 }

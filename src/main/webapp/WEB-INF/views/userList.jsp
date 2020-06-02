@@ -102,6 +102,11 @@ rel="stylesheet">
                                 </c:if>
                         </tr>
                     </c:forEach>
+                    <c:forEach var="user" items="${papaki}">
+                        <tr>
+                            <td>${user.user}</td>
+                        </tr>
+                        </c:forEach>    
                 </tbody>
         </div>
     </div>

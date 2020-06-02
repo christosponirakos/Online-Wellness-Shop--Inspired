@@ -24,4 +24,5 @@ public class PurchaseController {
         return ("purchaseList");
     }
 
+   
 }

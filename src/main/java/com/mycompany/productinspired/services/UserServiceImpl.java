@@ -19,9 +19,10 @@ public class UserServiceImpl implements IUserService{
         return dao.findAllUsers();
     }
 
-//    public Trainer findById(int id) {
-//        return dao.findById(id);
-//    }
+    @Override
+    public User findById(int id) {
+        return dao.findById(id);
+    }
 //
 //    public boolean save(Trainer trainer) {
 //        return dao.save(trainer);   
