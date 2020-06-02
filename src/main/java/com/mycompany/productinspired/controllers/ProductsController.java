@@ -20,7 +20,7 @@ public class ProductsController {
     public String getAllProducts(ModelMap view) {
         List<Product> products = productsService.getAllProducts();
         view.addAttribute("products", products);
-        return ("list-products");
+        return ("products");
 
     }
 
