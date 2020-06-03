@@ -58,7 +58,7 @@ public class ProductsController {
         if(productsService.addProduct(product)){ 
             
            view.addAttribute("succes", "You have successfully added a new product");
-           return ("products");
+           return ("productList");
         
         }else{ 
         
