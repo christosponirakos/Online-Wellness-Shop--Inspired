@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -42,7 +43,7 @@ public class PurchaseController {
     }
     
         @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public String saveStudent(ModelMap view, Purchase purchase) {
+    public String savePurchase(ModelMap view, Purchase purchase) {
         if(purchaseService.savePurchase(purchase)) {
             view.addAttribute("message", new String("All good!"));
         }
@@ -53,6 +54,24 @@ public class PurchaseController {
         return("newpurchase");
     }
     
+       @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String deletePurchase(ModelMap view, @PathVariable int id) {
+        if(purchaseService.deletePurchaseById(id)) {
+            view.addAttribute("msg", new String("Deleted Successfully!"));
+        } else {
+            view.addAttribute("msg", new String("Not Deleted!"));
+        }
+        return("redirect:/list");
+    }
+    
+    
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public String editPurchase(ModelMap view, @PathVariable int id) {
+        Purchase purchase = purchaseService.findPurchaseById(id);
+        view.addAttribute("purchase", purchase);
+        view.addAttribute("updateurl", updateurl);
+        return("editpurchase");
+    }
     
     
     
