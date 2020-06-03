@@ -1,6 +1,8 @@
 package com.mycompany.productinspired.controllers;
 
+import com.mycompany.productinspired.entities.Product;
 import com.mycompany.productinspired.entities.Purchase;
+import com.mycompany.productinspired.services.IProductsService;
 import com.mycompany.productinspired.services.IPurchaseService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,9 @@ public class PurchaseController {
 
     @Autowired
     IPurchaseService purchaseService;
+    
+    @Autowired
+    IProductsService productService;
 
     @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
     public String listAllTrainers(ModelMap view) {
@@ -23,6 +28,17 @@ public class PurchaseController {
 
         return ("purchaseList");
     }
-
+    
+    
+      @RequestMapping(value = {"/100142"}, method = RequestMethod.GET)
+    public String purchasesByUserId(ModelMap model) {
+//            String username = appService.getPrincipal();
+//            User user = userService.findById(49);
+            List<Product> products = productService.getProductByPurchaseId(100142);
+            model.addAttribute("products",products);
+//            model.addAttribute("loggedinuser", appService.getPrincipal());
+//            model.addAttribute("pagetitle", "My purchase");
+        return "productList";
+    }
    
 }

@@ -18,7 +18,8 @@ public interface IProductDao {
     public boolean updateProduct(Product product);
     
     public boolean deleteProductById(int id);
-//    
+    
+    public List<Product> getProductByPurchaseId(int id);
 
     
     

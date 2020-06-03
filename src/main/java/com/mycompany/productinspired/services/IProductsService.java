@@ -15,5 +15,7 @@ public interface IProductsService {
     public boolean updateProduct(Product p);
 
     public boolean deleteProductById(int id);
+    
+     public List<Product> getProductByPurchaseId(int id);
 
 }
