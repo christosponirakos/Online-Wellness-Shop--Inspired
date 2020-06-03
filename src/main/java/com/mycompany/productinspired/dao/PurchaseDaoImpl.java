@@ -65,13 +65,6 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements I
 
     @Override
     public List<Purchase> getPurchasesForUserById(int id) {
-//        Criteria crit = createEntityCriteria();
-////        crit.add(Restrictions.eq("user_id", id));
-//        List<Purchase> purchaseList = (List<Purchase>) crit.list();
-////        for ( Purchase p : purchaseList){
-////            Hibernate.initialize(p.getPurchaseDetailsList());
-////        } 
-
         Criteria crit = createEntityCriteria();
         Criteria uCrit = crit.createCriteria("user");
         uCrit.add(Restrictions.eq("id", id));
