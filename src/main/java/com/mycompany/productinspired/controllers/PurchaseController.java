@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/purchases")
 public class PurchaseController {
+
     private String listurl = "list";
     private String editurl = "edit";
     private String deleteurl = "delete";
     private String updateurl = "update";
-    
-    
+
     @Autowired
     IPurchaseService purchaseService;
 
@@ -34,60 +34,52 @@ public class PurchaseController {
         return ("purchaseList");
     }
 
-        @RequestMapping("/new")
+    @RequestMapping("/new")
     public String newPurchase(ModelMap view) {
         Purchase purchase = new Purchase();
         view.addAttribute("purchase", purchase);
         view.addAttribute("listurl", listurl);
-        return("newpurchase");
+        return ("newpurchase");
     }
-    
-        @RequestMapping(value = "/new", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
     public String savePurchase(ModelMap view, Purchase purchase) {
-        if(purchaseService.savePurchase(purchase)) {
+        if (purchaseService.savePurchase(purchase)) {
             view.addAttribute("message", new String("All good!"));
-        }
-        else {
+        } else {
             view.addAttribute("message", new String("All wrong!"));
         }
         view.addAttribute("listurl", listurl);
-        return("newpurchase");
+        return ("newpurchase");
     }
-    
-       @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deletePurchase(ModelMap view, @PathVariable int id) {
-        if(purchaseService.deletePurchaseById(id)) {
+        if (purchaseService.deletePurchaseById(id)) {
             view.addAttribute("msg", new String("Deleted Successfully!"));
         } else {
             view.addAttribute("msg", new String("Not Deleted!"));
         }
-        return("redirect:/list");
+        return ("redirect:/purchases/list");
     }
-    
-    
+
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editPurchase(ModelMap view, @PathVariable int id) {
         Purchase purchase = purchaseService.findPurchaseById(id);
         view.addAttribute("purchase", purchase);
         view.addAttribute("updateurl", updateurl);
-        return("editpurchase");
+        return ("editpurchase");
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String updatePurchase(ModelMap view, Purchase purchase) {
+        purchaseService.updatePurchase(purchase);
+        view.addAttribute("msg", new String(""));
+        return ("redirect:/purchases/list");
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 //    @RequestMapping(value = {"/100142"}, method = RequestMethod.GET)
 //    public String purchasesByUserId(ModelMap model) {
 //        List<Product> products = productService.getProductByPurchaseId(100142);
@@ -95,6 +87,4 @@ public class PurchaseController {
 //        return "productList";
 //    }
 //    
-    
-
 }
