@@ -51,7 +51,7 @@
 
 <p><strong>Water</strong> As you get older, you may be more prone to dehydration because your sense of thirst is not as sharp. Remember to sip water regularly to avoid urinary tract infections, constipation, and even confusion.</p>
 
- Vitamin BAfter the age of 50, your stomach produces less gastric acid making it harder to absorb vitamin B-12?needed to help keep blood and nerves healthy. Get the recommended daily intake (2.4 mcg) of B12 from fortified foods or a vitamin supplement.</p>
+ <p><strong>Vitamin B </strong>  After the age of 50, your stomach produces less gastric acid making it harder to absorb vitamin B-12?needed to help keep blood and nerves healthy. Get the recommended daily intake (2.4 mcg) of B12 from fortified foods or a vitamin supplement.</p>
     
    <p><strong>Vitamin D</strong>  With age, your skin is less efficient at synthesizing vitamin D, so consult your doctor about supplementing your diet with fortified foods or a multivitamin, especially if you?re obese or have limited sun exposure.</p>
 
