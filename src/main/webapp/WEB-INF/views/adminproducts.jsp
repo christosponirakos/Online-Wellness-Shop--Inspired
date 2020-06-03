@@ -140,10 +140,10 @@
                                                 <td scope="col" class="text-center">${product.details}</td>
 
                                                 <td align="right">
-                                                    <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-primary">
+                                                    <a href="<c:url value='${editurl}/${product.id}' />" class="btn btn-primary">
                                                         <span class="fa fa-pencil"></span> Edit
                                                     </a>
-                                                    <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-danger">
+                                                    <a href="<c:url value='${deleteurl}/${product.id}' />" class="btn btn-danger">
                                                         <span class="fa fa-trash"></span> Delete
 
 
@@ -152,8 +152,8 @@
                                         </c:forEach>
 
                                     </tbody>
-                                </table>
-                                <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-info">
+                              
+                                <a href="<c:url value='/new' />" class="btn btn-info">
                                     <span class="fa fa-lpus"></span>ADD</a>
 
 
