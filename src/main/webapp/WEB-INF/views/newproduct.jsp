@@ -41,10 +41,6 @@
                             <h3 class="section-subheading text-muted">Add a new product to inspire new customers!</h3>
                         </div>
 
-
-                        <!--New product-->
-
-
                         <form:form method="POST" action="new" modelAttribute= "product">
                             <form:input type="hidden" path="productId" id="productId"/>
 

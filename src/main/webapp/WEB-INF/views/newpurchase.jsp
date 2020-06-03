@@ -6,7 +6,6 @@
         
         <link href="<c:url value='/static/css/styles.css' />" type="text/css" rel="stylesheet"></link>
        
-       <link href="<c:url value='/resources/css/styles.css' />" rel="stylesheet"></link>
         <title>Add a new purchase</title>
         <style>
         header.masthead {
@@ -32,20 +31,15 @@
         <%@include file="nav.jsp" %>
 
 
- <header class="masthead">
+ 
+        <header class="masthead">
             <div class="container">
                 <section class="page-section bg-light">
                     <div class="container">
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">New purchase</h2>
+                            <h3 class="section-subheading text-muted">Add a new purchase of inspired customer!</h3>
                         </div>
-                    </div>
-                    
-                    <!--New product-->
-                    <div class='container' align='center' >
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="generic-container">
        
                    
                         <form:form method="POST" action="new" modelAttribute= "purchase">
@@ -80,7 +74,7 @@
                                 </div>
                             </div>
                          
-                            <div class="form-group row">
+                            <div class="form-group">
                                 <div class="col-sm-10">
                                     <button type="submit" class="btn btn-warning">Add</button>
                                 </div>
