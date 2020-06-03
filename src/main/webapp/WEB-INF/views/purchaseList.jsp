@@ -88,7 +88,7 @@
                                 <c:forEach items="${purchases}" var="purchase">
                                     <tr>
                                         <td scope="col" class="text-center">${purchase.id}</td>
-                                        <td scope="col" class="text-center">${purchase.userId}</td>
+                                        <td scope="col" class="text-center">${purchase.user.id}</td>
                                         <td scope="col" class="text-center">${purchase.date}</td>
                                         <td scope="col" class="text-center">${purchase.pending}</td>
 

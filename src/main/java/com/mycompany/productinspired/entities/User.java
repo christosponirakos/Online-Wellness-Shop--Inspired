@@ -1,16 +1,13 @@
 package com.mycompany.productinspired.entities;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -65,8 +62,6 @@ public class User implements Serializable {
     @Column(length = 45, unique = true)
     private String telephone;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Purchase> purchases;
 
     public User() {
     }
@@ -156,14 +151,6 @@ public class User implements Serializable {
         this.telephone = telephone;
     }
 
-    public List<Purchase> getPurchases() {
-        return purchases;
-    }
-
-    public void setPurchases(List<Purchase> purchases) {
-        this.purchases = purchases;
-    }
-
     @Override
     public int hashCode() {
         int hash = 5;
@@ -175,7 +162,6 @@ public class User implements Serializable {
         hash = 83 * hash + Objects.hashCode(this.email);
         hash = 83 * hash + Objects.hashCode(this.address);
         hash = 83 * hash + Objects.hashCode(this.telephone);
-        hash = 83 * hash + Objects.hashCode(this.purchases);
         return hash;
     }
 
@@ -215,15 +201,12 @@ public class User implements Serializable {
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
-        if (!Objects.equals(this.purchases, other.purchases)) {
-            return false;
-        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", address=" + address + ", telephone=" + telephone + ", purchases=" + purchases + '}';
+        return "User{" + "id=" + id + ", userName=" + userName + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", address=" + address + ", telephone=" + telephone + '}';
     }
 
 }

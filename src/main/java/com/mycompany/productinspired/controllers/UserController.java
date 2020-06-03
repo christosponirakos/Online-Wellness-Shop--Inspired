@@ -28,14 +28,14 @@ public class UserController {
         return ("userList");
     }
 
-    @RequestMapping(value = {"/byId"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/49"}, method = RequestMethod.GET)
     public String purchasesByUserId(ModelMap model) {
 //            String username = appService.getPrincipal();
 //            User user = userService.findById(49);
-            List<Purchase> papaki = purchaseService.getPurchasesForUserById(49);
-            model.addAttribute("papaki",papaki);
+            List<Purchase> purchases = purchaseService.getPurchasesForUserById(49);
+            model.addAttribute("purchases",purchases);
 //            model.addAttribute("loggedinuser", appService.getPrincipal());
-            model.addAttribute("pagetitle", "My purchase");
-        return "userList";
+//            model.addAttribute("pagetitle", "My purchase");
+        return "purchaseList";
     }
 }

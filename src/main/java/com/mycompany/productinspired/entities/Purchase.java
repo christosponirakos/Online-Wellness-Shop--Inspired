@@ -46,6 +46,8 @@ public class Purchase implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
+    
+    
     @Basic(optional = false)
     @NotNull
 //    @Column(name = "user_id", nullable = false)
@@ -53,11 +55,17 @@ public class Purchase implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
 
+    
+    
+    
     @Basic(optional = false)
     @NotNull
     @Column(nullable = false)
     private short pending;
 
+    
+    
+    
     public Purchase() {
     }
 
