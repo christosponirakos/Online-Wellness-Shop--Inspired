@@ -9,62 +9,14 @@
        <link href="<c:url value='/resources/css/styles.css' />" rel="stylesheet"></link>
         <title>Add a User</title>
         <style>
-            
-            body {
-	height: 100%;
-	background-color:rgb(245, 245, 245);
-}
-
-body, .form-control{
-	font-size:12px!important;
-}
-
-.has-error{
-	color:red;
-}
-
-.generic-container {
-  position: fixed;
-  width:80%;
-  margin-left: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #EAE7E7;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.custom-width {
-    width: 80px !important;
-}
-#error
-{
-    color: red;
-}
-
-#thead{
-    font-size: 15px;
-}
-
-.panel-heading{
-    text-align: center;
-}
-
-.table{
-    font-size: 15px;
-}
-
-#form{
-    font-size: 15px;
-}
+           
         header.masthead {
             padding-top: 10.5rem;
             padding-bottom: 6rem;
             text-align: center;
             color: rgb(13, 27, 32);
             
-            background-image: url("${pageContext.request.contextPath}/static/imghealthy-eating-ingredients-1296x728-header.jpg");
+            background-image: url("${pageContext.request.contextPath}/static/img/healthy-eating-ingredients-1296x728-header.jpg");
             background-repeat: no-repeat;
             background-attachment: scroll;
             background-position: center center;
