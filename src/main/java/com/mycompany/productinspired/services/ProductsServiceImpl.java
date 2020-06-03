@@ -45,4 +45,11 @@ public class ProductsServiceImpl implements IProductsService {
         return dao.deleteProductById(id);
     }
   
+  
+
+    @Override
+    public List<Product> getProductByPurchaseId(int id) {
+        return dao.getProductByPurchaseId(id);
+    }
+
 }

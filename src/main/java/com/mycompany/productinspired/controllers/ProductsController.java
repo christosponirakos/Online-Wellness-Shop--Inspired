@@ -1,6 +1,7 @@
 package com.mycompany.productinspired.controllers;
 
 import com.mycompany.productinspired.entities.Product;
+import com.mycompany.productinspired.entities.Purchase;
 import com.mycompany.productinspired.services.IProductsService;
 import java.util.List;
 
@@ -67,6 +68,9 @@ public class ProductsController {
         view.addAttribute("listurl", listurl);
         return("newproduct");
         }
+    
+    
+   
     
     }
             

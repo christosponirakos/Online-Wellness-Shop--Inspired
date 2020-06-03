@@ -2,8 +2,10 @@ package com.mycompany.productinspired.dao;
 
 
 import com.mycompany.productinspired.entities.Product;
+import com.mycompany.productinspired.entities.Purchase;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 
@@ -72,6 +74,16 @@ public class ProductDaoImpl extends AbstractDao<Integer,Product> implements IPro
             System.out.println(e.getMessage());
             return false;
         }
+    }
+
+    @Override
+    public List<Product> getProductByPurchaseId(int id) {
+       
+        Criteria crit = createEntityCriteria();
+        Criteria uCrit = crit.createCriteria("product");
+        uCrit.add(Restrictions.eq("id", id));
+        List<Product> productList = (List<Product>) uCrit.list();
+        return productList;
     }
     
 

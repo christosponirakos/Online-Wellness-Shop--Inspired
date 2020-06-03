@@ -6,20 +6,22 @@
 package com.mycompany.productinspired.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
-import javax.persistence.Basic;
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -49,7 +51,11 @@ public class Purchase implements Serializable {
 
     private short pending;
 
-    
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "purchase_product", 
+             joinColumns = { @JoinColumn(name = "purchase_id") }, 
+             inverseJoinColumns = { @JoinColumn(name = "product_id") })
+    private List<Product> products = new ArrayList<Product>();
     
     
     public Purchase() {
@@ -98,13 +104,22 @@ public class Purchase implements Serializable {
         this.user = user;
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + this.id;
-        hash = 89 * hash + Objects.hashCode(this.date);
-        hash = 89 * hash + Objects.hashCode(this.user);
-        hash = 89 * hash + this.pending;
+        hash = 23 * hash + this.id;
+        hash = 23 * hash + Objects.hashCode(this.date);
+        hash = 23 * hash + Objects.hashCode(this.user);
+        hash = 23 * hash + this.pending;
+        hash = 23 * hash + Objects.hashCode(this.products);
         return hash;
     }
 
@@ -123,13 +138,16 @@ public class Purchase implements Serializable {
         if (this.id != other.id) {
             return false;
         }
-        if (this.user != other.user) {
-            return false;
-        }
         if (this.pending != other.pending) {
             return false;
         }
         if (!Objects.equals(this.date, other.date)) {
+            return false;
+        }
+        if (!Objects.equals(this.user, other.user)) {
+            return false;
+        }
+        if (!Objects.equals(this.products, other.products)) {
             return false;
         }
         return true;
@@ -137,7 +155,7 @@ public class Purchase implements Serializable {
 
     @Override
     public String toString() {
-        return "Purchase{" + "id=" + id + ", date=" + date + ", userId=" + user + ", pending=" + pending + '}';
+        return "Purchase{" + "id=" + id + ", date=" + date + ", user=" + user + ", pending=" + pending + ", products=" + products + '}';
     }
-
+    
 }
