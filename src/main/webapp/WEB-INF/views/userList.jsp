@@ -105,7 +105,7 @@
         
                             </tbody>
                             </table>
-  <a href="<c:url value='${addurl}/${purchase.id}' />" class="btn btn-info">
+  <a href="<c:url value='/new' />" class="btn btn-info">
       <span class="fa fa-plus"></span>ADD</a>
                                    
                         

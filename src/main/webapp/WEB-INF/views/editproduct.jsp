@@ -207,7 +207,7 @@
 
                             <form:form  id="form" method="POST" action="{id}" modelAttribute="product" class="form-horizontal">
                                 <form:input type="hidden" path="id" id="id" />
-                                
+
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <label class="col-md-3 control-lable" for="title">Title</label>
@@ -248,6 +248,28 @@
                                             <form:input type="text" path="details" id="details" class="form-control input-sm" maxlength="40"/>
 
                                             <form:errors path="details" cssStyle="color: #ff0000;"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label class="col-md-3 control-lable" for="shortDescription">Duration</label>
+                                        <div class="col-md-7">
+                                            <form:input type="number" path="duration" id="duration" class="form-control input-sm" />
+
+                                            <form:errors path="duration" cssStyle="color: #ff0000;"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label class="col-md-3 control-lable" for="category">Category</label>
+                                        <div class="col-md-7">
+                                            <form:input type="text" path="category" id="category" class="form-control input-sm" maxlength="40"/>
+
+                                            <form:errors path="category" cssStyle="color: #ff0000;"/>
 
                                         </div>
                                     </div>
