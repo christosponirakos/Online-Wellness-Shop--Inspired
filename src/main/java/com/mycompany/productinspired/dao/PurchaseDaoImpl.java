@@ -5,7 +5,6 @@
  */
 package com.mycompany.productinspired.dao;
 
-
 import com.mycompany.productinspired.entities.Purchase;
 import java.util.List;
 import org.hibernate.Criteria;
@@ -18,24 +17,24 @@ import org.springframework.stereotype.Repository;
  * @author ticho
  */
 @Repository("purchaseDao")
-public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase>  implements IPurchaseDao{
+public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements IPurchaseDao {
 
     @Override
     public List<Purchase> findAllPurchasess() {
-        
+
         Criteria criteria = createEntityCriteria();
         return (List<Purchase>) criteria.list();
     }
 
     @Override
     public Purchase findPurchaseById(int id) {
-          Purchase purchase = getByKey(id);
+        Purchase purchase = getByKey(id);
         if (purchase != null) {
             return purchase;
         }
         return null;
     }
-    
+
     @Override
     public boolean savePurchase(Purchase purchase) {
         boolean notSaved = persist(purchase);
@@ -52,12 +51,11 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase>  implements 
 
     @Override
     public boolean updatePurchase(Purchase purchase) {
-        
-         Purchase db_purchase = findPurchaseById(purchase.getId());
+
+        Purchase db_purchase = findPurchaseById(purchase.getId());
         if (db_purchase != null) {
             db_purchase.setDate(purchase.getDate());
             db_purchase.setPending(purchase.getPending());
-            
 
             return savePurchase(db_purchase);
         } else {
@@ -66,14 +64,19 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase>  implements 
     }
 
     @Override
-    public List<Purchase> getPurchasesForUserById(int id){
+    public List<Purchase> getPurchasesForUserById(int id) {
+//        Criteria crit = createEntityCriteria();
+////        crit.add(Restrictions.eq("user_id", id));
+//        List<Purchase> purchaseList = (List<Purchase>) crit.list();
+////        for ( Purchase p : purchaseList){
+////            Hibernate.initialize(p.getPurchaseDetailsList());
+////        } 
+
         Criteria crit = createEntityCriteria();
-//        crit.add(Restrictions.eq("user_id", id));
-        List<Purchase> purchaseList = (List<Purchase>) crit.list();
-//        for ( Purchase p : purchaseList){
-//            Hibernate.initialize(p.getPurchaseDetailsList());
-//        } 
+        Criteria uCrit = crit.createCriteria("user");
+        uCrit.add(Restrictions.eq("id", id));
+        List<Purchase> purchaseList = (List<Purchase>) uCrit.list();
         return purchaseList;
     }
-    
+
 }

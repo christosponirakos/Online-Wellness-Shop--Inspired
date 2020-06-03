@@ -115,7 +115,9 @@ body, .form-control{
                     <hr>-->
                    
                         <form:form method="POST" action="new" modelAttribute= "product">
-                        <form:input type="hidden" path="id" id="id" />
+                             <form:input type="hidden" path="productId" id="productId"/>
+                            
+                     
                          
                             <div class="row">
                                 <div class="form-group col-md-12">
@@ -129,7 +131,7 @@ body, .form-control{
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label class="col-md-3 control-lable" for="title">Price</label>
+                                    <label class="col-md-3 control-lable" for="price">Price</label>
                                     <div class="col-md-7">
                                         <form:input type="number" path="price" id="price" class="form-control input-sm" maxlength="45"/>
                                         <form:errors path="price" cssStyle="color: #ff0000;"/>
@@ -162,7 +164,7 @@ body, .form-control{
                         </form:form>
                     </div>
                     <div id="msg">${message}</div>
-                    <div id="list"><a href="<c:url value='/${listurl}' />">Back to the list of products</a></div>
+                    <div id="list"><a href="<c:url value='/products/${listurl}' />">Back to the list of products</a></div>
             
                     
                     
