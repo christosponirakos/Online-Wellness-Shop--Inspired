@@ -1,6 +1,9 @@
 
 
 
+
+
+
 <%@include file="setup.jsp" %>
 <html>
     <head>
@@ -16,7 +19,7 @@
         text-align: center;
         color: rgb(13, 27, 32);
         
-        background-image: url("../../static/img/healthy-eating-ingredients-1296x728-header.jpg");
+        background-image: url("${pageContext.request.contextPath}/static/img/4.jpg");
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: center center;
@@ -61,24 +64,24 @@
                     <div class="col-md-12">
                         <div class="card-deck">
                             <div class="card">
-                                <img src="${pageContext.request.contextPath}/static/img/category.jpg" class="card-img-top" style="" alt="fitness">
+                                <img src="${pageContext.request.contextPath}/static/img/category.png" class="card-img-top" style="" alt="fitness">
                                 <div class="card-body">
                                     <h5 class="card-title">Nutrition</h5>
                                     <p class="card-text">We are here for you in your every step of transforming your body. Either to lose weight, or to explore new diets, you can count on us!</p>
 
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted"> <a href="/Wellness/products/nutrition" class="btn btn-outline-warning "> See More</a></small>
+                                    <small class="text-muted"> <a href="${pageContext.request.contextPath}/products/list" class="btn btn-outline-warning "> See More</a></small>
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="${pageContext.request.contextPath}/static/img/category2.jpg" class="card-img-top" alt="Fitness ">
+                                <img src="${pageContext.request.contextPath}/static/img/category2.png" class="card-img-top" alt="Fitness ">
                                 <div class="card-body">
                                     <h5 class="card-title">Fitness</h5>
                                     <p class="card-text">Lacking motivation to get back into the gym? Back in the gym already but feel stagnated? Or maybe you?re just looking for new inspiration for a the new year. We are here for you offering the best deals!
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted"> <a href="/Wellness/products/fitness" class="btn btn-outline-warning "> See More</a></small>
+                                    <small class="text-muted"> <a href="${pageContext.request.contextPath}/products/list" class="btn btn-outline-warning "> See More</a></small>
                                 </div>
                             </div>
                         </div>

@@ -11,35 +11,37 @@
         
         <title>Purchases' List</title>
         <style>
-            
-        header.masthead {
-            padding-top: 10.5rem;
-            padding-bottom: 6rem;
-            text-align: center;
-            color: rgb(13, 27, 32);
-            
-            background-image: url("https://piraeuspress.gr/wp-content/uploads/2020/02/healthy-eating-ingredients-1296x728-header.jpg");
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            background-position: center center;
-            background-size: cover;
-        }
-        .bloc_left_ {
-            color: #c01508;
-            text-align: center;
-            font-weight: bold;
-            font-size: 150%;
-        }
-        .category_block li:hover {
-            background-color: #007bff;
-        }
-        .category_block li:hover a {
-            color: #ffffff;
-        }
-        .category_block li a {
-            color: #343a40;
-        }
-    </style>
+       
+
+            header.masthead {
+                padding-top: 10.5rem;
+                padding-bottom: 6rem;
+                text-align: center;
+                color: rgb(13, 27, 32);
+
+                background-image: url("${pageContext.request.contextPath}/static/img/color2.jpg");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: cover;
+            }
+            .bloc_left_ {
+                color: #c01508;
+                text-align: center;
+                font-weight: bold;
+                font-size: 150%;
+            }
+            .category_block li:hover {
+                background-color: #007bff;
+            }
+            .category_block li:hover a {
+                color: #ffffff;
+            }
+            .category_block li a {
+                color: #343a40;
+            }
+        </style>
+
        
     </head>
     
@@ -60,6 +62,7 @@
                     <div class="container">
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">All purchases</h2>
+                             <h3 class="section-subheading text-muted">made by inspired clients </h3>
                            
                         </div>
                     </div>
@@ -92,40 +95,47 @@
                                         <td scope="col" class="text-center">${purchase.date}</td>
                                         <td scope="col" class="text-center">${purchase.pending}</td>
 
-                                        <td align="right">
-                                            <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-wanring">
-                                                <span class="fa fa-plus"></span> View details
-                                            </a>
-                                            
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+                                       <td align="right">
+                                                    <a href="<c:url value='${editpurchase}/${purchase.id}' />" class="btn btn-primary">
+                                                        <span class="fa fa-pencil"></span> Edit
+                                                    </a>
+                                                    <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-danger">
+                                                        <span class="fa fa-trash"></span> Delete
 
-                            </tbody>
 
-                        </table>
-                        
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+
+                                    </tbody>
+                                </table>
+                                <a href="<c:url value='${editpurchase}/${purchase.id}' />" class="btn btn-info">
+                                    <span class="fa fa-plus"></span>ADD</a>
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
                     </div>
+                </section>
 
-               
+            </div>
 
 
-
-    </div>
-</div>
-</section>
-
-                     </div>
-                 
-           
         </header>
 
+        <br>
+        <br>
 
-
-
-
-
-    <%@include file="footer.jsp" %>
-            <%@include file="scripts.jsp" %>
+        <%@include file="footer.jsp" %>
+        <%@include file="scripts.jsp" %>
     </body>
 </html>
+
+
+
