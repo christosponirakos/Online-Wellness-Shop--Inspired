@@ -1,4 +1,4 @@
-<%@include file="z1JSP_setup.jsp" %>
+<%@include file="setup.jsp" %>
 <html>
     <head>
         <%@include file="head.jsp" %>
