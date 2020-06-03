@@ -156,6 +156,25 @@ body, .form-control{
                                     </div>
                                 </div>
                             </div>
+				  <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-3 control-lable" for="price">Duration</label>
+                                    <div class="col-md-7">
+                                        <form:input type="number" path="duration" id="duration" class="form-control input-sm"/>
+                                        <form:errors path="duration" cssStyle="color: #ff0000;"/>
+                                    </div>
+                                </div>
+                            </div>
+				 <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-3 control-lable" for="price">Category</label>
+                                    <div class="col-md-7">
+                                        <form:input type="text" path="category" id="category" class="form-control input-sm"/>
+                                        <form:errors path="category" cssStyle="color: #ff0000;"/>
+                                    </div>
+                                </div>
+                            </div>
+				
                             <div class="form-group row">
                                 <div class="col-sm-10">
                                     <button type="submit" class="btn btn-success">Add</button>
@@ -167,9 +186,6 @@ body, .form-control{
                     <div id="list"><a href="<c:url value='/products/${listurl}' />">Back to the list of products</a></div>
             
                     
-                    
-                    
-           
         </header>
 
 
