@@ -21,7 +21,6 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements I
 
     @Override
     public List<Purchase> findAllPurchasess() {
-
         Criteria criteria = createEntityCriteria();
         return (List<Purchase>) criteria.list();
     }
@@ -46,7 +45,13 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements I
 
     @Override
     public boolean deletePurchaseById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+               Purchase purchase = getByKey(id);
+        if(purchase != null) {
+            delete(purchase);
+            if(getByKey(id) == null) 
+                return true;
+        }
+        return false;
     }
 
     @Override

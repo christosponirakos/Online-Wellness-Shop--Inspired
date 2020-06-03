@@ -14,31 +14,68 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/purchases")
 public class PurchaseController {
-
+    private String listurl = "list";
+    private String editurl = "edit";
+    private String deleteurl = "delete";
+    private String updateurl = "update";
+    
+    
     @Autowired
     IPurchaseService purchaseService;
-    
+
     @Autowired
     IProductsService productService;
 
     @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
-    public String listAllTrainers(ModelMap view) {
+    public String listAllPurchases(ModelMap view) {
         List<Purchase> purchases = purchaseService.findAllPurchasess();
         view.addAttribute("purchases", purchases);
-
         return ("purchaseList");
     }
-    
-    
-      @RequestMapping(value = {"/100142"}, method = RequestMethod.GET)
-    public String purchasesByUserId(ModelMap model) {
-//            String username = appService.getPrincipal();
-//            User user = userService.findById(49);
-            List<Product> products = productService.getProductByPurchaseId(100142);
-            model.addAttribute("products",products);
-//            model.addAttribute("loggedinuser", appService.getPrincipal());
-//            model.addAttribute("pagetitle", "My purchase");
-        return "productList";
+
+        @RequestMapping("/new")
+    public String newPurchase(ModelMap view) {
+        Purchase purchase = new Purchase();
+        view.addAttribute("purchase", purchase);
+        view.addAttribute("listurl", listurl);
+        return("newpurchase");
     }
-   
+    
+        @RequestMapping(value = "/new", method = RequestMethod.POST)
+    public String saveStudent(ModelMap view, Purchase purchase) {
+        if(purchaseService.savePurchase(purchase)) {
+            view.addAttribute("message", new String("All good!"));
+        }
+        else {
+            view.addAttribute("message", new String("All wrong!"));
+        }
+        view.addAttribute("listurl", listurl);
+        return("newpurchase");
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    @RequestMapping(value = {"/100142"}, method = RequestMethod.GET)
+//    public String purchasesByUserId(ModelMap model) {
+//        List<Product> products = productService.getProductByPurchaseId(100142);
+//        model.addAttribute("products", products);
+//        return "productList";
+//    }
+//    
+    
+
 }
