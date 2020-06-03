@@ -22,7 +22,7 @@
   body {
        background-image: url("${pageContext.request.contextPath}/static/img/big.jpg");
            </style>    
-            }
+           
     </head>
     <body>
          <%@include file="nav.jsp" %>
