@@ -2,6 +2,7 @@ package com.mycompany.productinspired.services;
 
 import java.util.List;
 import com.mycompany.productinspired.dao.IUserDao;
+import com.mycompany.productinspired.entities.Purchase;
 import com.mycompany.productinspired.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,11 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service("userservice")
 @Transactional
-public class UserServiceImpl implements IUserService{
+public class UserServiceImpl implements IUserService {
 
     @Autowired
     private IUserDao dao;
-    
+
     @Override
     public List<User> findAllUsers() {
         return dao.findAllUsers();
@@ -35,5 +36,6 @@ public class UserServiceImpl implements IUserService{
 //    public boolean update(Trainer trainer) {
 //        return dao.update(trainer);
 //    }
-    
+
+   
 }

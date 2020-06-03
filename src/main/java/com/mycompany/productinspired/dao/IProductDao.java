@@ -9,15 +9,15 @@ public interface IProductDao {
     
     public List<Product> getAllProducts();
     
-//    public List<Product> getProductByCategory(String category);
-//    
-//    public Product getProductById(int id);
-//    
-//    public boolean addProduct(Product product); 
-//
-//    public boolean updateProduct(Product product);
-//    
-//    public boolean deleteProductById(int id);
+   // public List<Product> getProductByCategory(String category);
+    
+    public Product getProductById(int id);
+    
+    public boolean addProduct(Product product); 
+
+    public boolean updateProduct(Product product);
+    
+    public boolean deleteProductById(int id);
 //    
 
     

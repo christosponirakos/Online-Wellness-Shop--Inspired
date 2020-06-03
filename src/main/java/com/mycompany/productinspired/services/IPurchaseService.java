@@ -24,6 +24,6 @@ public interface IPurchaseService {
     public boolean updatePurchase(Purchase purchase);
    
     public boolean savePurchase(Purchase purchase);
-    
-    public List<Purchase> getPurchasesForUserById(int id);
+     public List<Purchase> getPurchasesForUserById(int id);
+   
 }

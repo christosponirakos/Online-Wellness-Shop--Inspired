@@ -19,30 +19,30 @@ public class ProductsServiceImpl implements IProductsService {
     public List<Product> getAllProducts() {
         return dao.getAllProducts();
     }
-//
+
 //    @Override
 //    public List<Product> getProductByCategory(String category) {
 //        return dao.getProductByCategory(category);
 //    }
-//
-//    @Override
-//    public Product getProductById(int id) {
-//        return dao.getProductById(id);
-//    }
-//
-//    @Override
-//    public boolean addProduct(Product p) {
-//        return dao.addProduct(p);
-//    }
-//
-//    @Override
-//    public boolean updateProduct(Product p) {
-//        return dao.updateProduct(p);
-//    }
-//
-//    @Override
-//    public boolean deleteProductById(int id) {
-//        return dao.deleteProductById(id);
-//    }
-//  
+
+    @Override
+    public Product getProductById(int id) {
+        return dao.getProductById(id);
+    }
+
+    @Override
+    public boolean addProduct(Product p) {
+        return dao.addProduct(p);
+    }
+
+    @Override
+    public boolean updateProduct(Product p) {
+        return dao.updateProduct(p);
+    }
+
+    @Override
+    public boolean deleteProductById(int id) {
+        return dao.deleteProductById(id);
+    }
+  
 }
