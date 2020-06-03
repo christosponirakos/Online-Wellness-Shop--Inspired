@@ -109,7 +109,7 @@ body, .form-control{
             <div class="row">
                 <div class="col-md-8">
                     <div class="generic-container">
-       
+    
                    
                         <form:form method="POST" action="new" modelAttribute= "user">
                         <form:input type="hidden" path="id" id="id" />
@@ -178,7 +178,7 @@ body, .form-control{
                         </form:form>
                     </div>
                     <div id="msg">${message}</div>
-                    <div id="list"><a href="<c:url value='/${listurl}' />">Back to the list of users</a></div>
+                    <div id="list"><a href="<c:url value='/users/${listurl}' />">Back to the list of users</a></div>
             
                     
                     

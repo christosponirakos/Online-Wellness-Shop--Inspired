@@ -151,7 +151,7 @@ body, .form-control{
                         </form:form>
                     </div>
                     <div id="msg">${message}</div>
-                    <div id="list"><a href="<c:url value='/${listurl}' />">Back to the list of purchases</a></div>
+                    <div id="list"><a href="<c:url value='purchases/${listurl}' />">Back to the list of purchases</a></div>
             
                     
                     

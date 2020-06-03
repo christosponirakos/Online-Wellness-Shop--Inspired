@@ -145,7 +145,7 @@
                                                 <td scope="col" class="text-center">${product.details}</td>
 
                                                 <td align="right">
-                                                    <a href="<c:url value='${purchaseULR}/${product.productId}'/>" class="btn btn-warning">
+                                                    <a href="<c:url value='${purchaseurl}/${product.productId}'/>" class="btn btn-warning">
                                                         <span class="fa fa-shopping-cart"></span>Purchase
                                                     </a
 
@@ -157,6 +157,7 @@
                                     </tbody>
 
                                 </table>
+                                
 
                             </div>
 
