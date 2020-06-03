@@ -276,7 +276,7 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-warning">Submit</button>
-                                <div style="float:right;" ><a href="<c:url value='/${listurl}' />">Back to the list of products</a></div>
+                                <div style="float:right;" ><a href="<c:url value='products/${listurl}' />">Back to the list of products</a></div>
                             </form:form>
                         </div>
                         <br>

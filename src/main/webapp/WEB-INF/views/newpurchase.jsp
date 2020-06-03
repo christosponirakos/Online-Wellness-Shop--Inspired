@@ -14,7 +14,7 @@
             text-align: center;
             color: rgb(13, 27, 32);
             
-            background-image: url("${pageContext.request.contextPath}/static/img/healthy-eating-ingredients-1296x728-header.jpg");
+            background-image: url("${pageContext.request.contextPath}/static/img/color2.jpg");
             background-repeat: no-repeat;
             background-attachment: scroll;
             background-position: center center;
@@ -38,7 +38,7 @@
                     <div class="container">
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">New purchase</h2>
-                            <h3 class="section-subheading text-muted">Add a new purchase of inspired customer!</h3>
+                            <h3 class="section-subheading text-muted">Add a new purchase of an inspired customer!</h3>
                         </div>
        
                    
@@ -47,18 +47,18 @@
                          
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label class="col-md-3 control-lable" for="customerId">Customer ID</label>
-                                    <div class="col-md-7">
-                                        <form:input type="number" path="customerId" id="customerId" class="form-control input-sm"/>
+                                    <label class="col-md-12 control-lable" for="user.id">User ID</label>
+                                    <div class="col-md-12">
+                                        <form:input type="number" path="user.id" id="user.id" class="form-control input-sm"/>
                                         <!--      <div class="has-error"> -->
-                                        <form:errors path="customerId" cssStyle="color: #ff0000;"/>
+                                        <form:errors path="user.id" cssStyle="color: #ff0000;"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label class="col-md-3 control-lable" for="date">Date</label>
-                                    <div class="col-md-7">
+                                    <label class="col-md-12 control-lable" for="date">Date</label>
+                                    <div class="col-md-12">
                                         <form:input type="date" path="date" id="date" class="form-control input-sm"/>
                                         <form:errors path="date" cssStyle="color: #ff0000;"/>
                                     </div>
@@ -66,8 +66,8 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label class="col-md-3 control-lable" for="pending">Pending</label>
-                                    <div class="col-md-7">
+                                    <label class="col-md-12 control-lable" for="pending">Pending</label>
+                                    <div class="col-md-12">
                                         <form:input type="text" path="pending" id="pending" class="form-control input-sm"/>
                                         <form:errors path="pending" cssStyle="color: #ff0000;"/>
                                     </div>
@@ -75,7 +75,7 @@
                             </div>
                          
                             <div class="form-group">
-                                <div class="col-sm-10">
+                                <div class="col-sm-12">
                                     <button type="submit" class="btn btn-warning">Add</button>
                                 </div>
                             </div>
@@ -87,7 +87,9 @@
                     
                     
                     
-           
+           </section>
+<div>
+</div>
         </header>
 
 

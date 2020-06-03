@@ -112,13 +112,15 @@
                     <div id="msg">${message}</div>
                     <div id="list"><a href="<c:url value='/users/${listurl}' />">Back to the list of users</a></div>
 
-
+</section>
+<div>
+</div>
 
 
 
                     </header>
 
-
+                    
 
                     <br>
                     <br>
