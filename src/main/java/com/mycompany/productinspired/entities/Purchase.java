@@ -52,7 +52,7 @@ public class Purchase implements Serializable {
     @NotNull
 //    @Column(name = "user_id", nullable = false)
     @ManyToOne(optional = false)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "id")
     private User user;
 
     
