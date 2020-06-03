@@ -94,7 +94,8 @@
         
           </main>
                                 
-            
+                                <br>
+                                <br>
         
         <%@include file="footer.jsp" %>
         <%@include file="scripts.jsp" %>

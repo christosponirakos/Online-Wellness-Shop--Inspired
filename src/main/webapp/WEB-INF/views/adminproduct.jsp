@@ -95,6 +95,10 @@
         <%@include file="nav.jsp" %>
 
 
+
+
+
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
@@ -106,15 +110,6 @@
                                 art </h3>
                         </div>
                     </div>
-
-
-                    <!--Search filter-->
-                    <form className ="border border-primary p-3" onkeyup ="searchTable()">
-                        <input type ="text" id ="myInput"  name = "myInput" placeholder="Fitness/Nutrition..." />
-                        <button  >Search</button>
-                    </form>
-                    <br>
-
 
                     <!--    <div class="container-fluid" id="navbarid">
                         </div>
@@ -145,9 +140,11 @@
                                                 <td scope="col" class="text-center">${product.details}</td>
 
                                                 <td align="right">
-                                                    <a href="<c:url value='${purchaseULR}/${product.productId}'/>" class="btn btn-warning">
-                                                        <span class="fa fa-shopping-cart"></span>Purchase
-                                                    </a
+                                                    <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-primary">
+                                                        <span class="fa fa-pencil"></span> Edit
+                                                    </a>
+                                                    <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-danger">
+                                                        <span class="fa fa-trash"></span> Delete
 
 
                                                 </td>
@@ -155,8 +152,11 @@
                                         </c:forEach>
 
                                     </tbody>
-
                                 </table>
+                                <a href="<c:url value='${detailsULR}/${purchase.id}' />" class="btn btn-info">
+                                    <span class="fa fa-lpus"></span>ADD</a>
+
+
 
                             </div>
 
@@ -176,6 +176,7 @@
 
 
 
+
         <br>
         <br>
 
@@ -183,3 +184,4 @@
         <%@include file="scripts.jsp" %>
     </body>
 </html>
+

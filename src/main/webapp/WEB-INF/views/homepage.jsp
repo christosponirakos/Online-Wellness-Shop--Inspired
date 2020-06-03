@@ -5,8 +5,8 @@
 <html>
     <head>
         <style>
-        header.masthead {
-    background-image: url("${pageContext.request.contextPath}/static/img/gymn.jpg");
+        #inspired{
+    background-image: url("${pageContext.request.contextPath}/static/img/header.jpg");
     background-repeat: no-repeat;
   background-attachment: scroll;
 background-position: center center;
@@ -21,7 +21,7 @@ background-position: center center;
     <body>
         <%@include file="nav_fluid.jsp" %>
      
-                <!-- Masthead-->
+           <!-- Masthead-->
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">We work for your mind, body and spirit</div>
@@ -30,8 +30,7 @@ background-position: center center;
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Explore</a>
             </div>
         </header>
-           
-            
+          
 
                 
         <!-- Service-->
@@ -68,7 +67,7 @@ background-position: center center;
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">
                             </button>
-                            <a class="btn btn-outline-primary btn-md text-uppercase" href="/Wellness/about">Our story</a>
+                            <a class="btn btn-outline-primary btn-md text-uppercase" href="${pageContext.request.contextPath}/about">Our story</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +80,7 @@ background-position: center center;
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Nutrition</h2>
                     <h3 class="section-subheading text-muted">To eat is a necessity, but to eat intelligently is an art </h3>
-                    <a class="btn btn-outline-primary" href="/Wellness/products"> View All</a>
+                    <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/products/list"> View All</a>
 
                 </div>  
                 <div class="container my-4">
@@ -116,9 +115,8 @@ background-position: center center;
                                                  alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title">Mediterranean diet</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                    card's content.</p>
-                                                <a class="btn btn-primary">Purchase</a>
+                                                <p class="card-text">It encorporates the traditional healthy living habits of people from countries bordering the Mediterranean Sea, including France, Greece, Italy and Spain.</p>
+                                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -128,9 +126,8 @@ background-position: center center;
                                                  alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title">Protein diet</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                    card's content.</p>
-                                                <a class="btn btn-primary">Purchase</a>
+                                                <p class="card-text">A high-protein diet encourages eating more protein and fewer carbohydrates or fat to boost weight loss, improve energy, and enhance athletic performance.</p>
+                                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -140,9 +137,8 @@ background-position: center center;
                                                  alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title">Keto diet</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                    card's content.</p>
-                                                <a class="btn btn-primary">Purchase</a>
+                                                <p class="card-text">Keep your appetite in check with our lowest carb meal plan.It promotes weight loss with satiating healthy fats, grass fed meats, and wild caught seafood.</p>
+                                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -160,9 +156,8 @@ background-position: center center;
                                                  alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title">Paleo diet</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                    card's content.</p>
-                                                <a class="btn btn-primary">Purchase</a>
+                                                <p class="card-text">The aim is to return to a way of eating that's more like what early humans ate. The diet's reasoning is that the human body is genetically mismatched to the modern diet that emerged with farming practices.</p>
+                                                <a class="btn btn-primary" href="${pageContext.request.contextPath}//products/list">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -172,9 +167,8 @@ background-position: center center;
                                                  alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title">Macrobiotic diet</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                    card's content.</p>
-                                                <a class="btn btn-primary">Purchase</a>
+                                                <p class="card-text">A macrobiotic diet isn't just about your weight -- it's about achieving balance in your life. It promises a healthier, more holistic long-term lifestyle for men, women, and children that encompasses mental outlook as well as food choices.</p>
+                                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -184,9 +178,8 @@ background-position: center center;
                                                  alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title">Homemade diet</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                    card's content.</p>
-                                                <a class="btn btn-primary">Purchase</a>
+                                                <p class="card-text">Every time you look up there seems to be some new diet regime promising miracle results. If you are tired of the dieting treadmill - losing weight then gaining it all back again - then say goodbye to dieting and calorie counting for good.</p>
+                                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -206,7 +199,7 @@ background-position: center center;
                             <div class="text-center">
                                 <h2 class="section-heading text-uppercase">Fitness</h2>
                                 <h3 class="section-subheading text-muted">Only a healthy and strong body creates a healthy mind and soul</h3>
-                                <a class="btn btn-outline-primary" href="/Wellness/products"> View All</a>
+                                <a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/Wellness/products/list"> View All</a>
                             </div>
                             <div class="container my-4">
                                 <!--Carousel Wrapper-->
@@ -238,9 +231,8 @@ background-position: center center;
                                                              alt="Card image cap">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Yoga</h4>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                                card's content.</p>
-                                                            <a class="btn btn-primary">Purchase</a>
+                                                            <p class="card-text">By focusing our attention on the breath, on various senses and on the inner-body, in meditation classes we withdraw from our busy life. We step out of the fast stream of thoughts to find a quiet place within ourselves.</p>
+                                                            <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -250,9 +242,8 @@ background-position: center center;
                                                              alt="Card image cap">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Bootcamp classes</h4>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                                card's content.</p>
-                                                            <a class="btn btn-primary">Purchase</a>
+                                                            <p class="card-text">Boot camp workouts can vary. They generally include a fairly intense mix of aerobic, strength training and speed elements within each class session. One boot camp workout might stress calisthenics while another stresses military-style drills.</p>
+                                                            <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -262,9 +253,8 @@ background-position: center center;
                                                              alt="Card image cap">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Weight training</h4>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                                card's content.</p>
-                                                            <a class="btn btn-primary">Purchase</a>
+                                                            <p class="card-text">How Strength Training Helps Your Health. Strength training makes you stronger and fitter. Strength training protects bone health and muscle mass. Strength training helps keep the weight off for good. Strength training helps you develop better body mechanics. Strength training can help with chronic disease management.</p>
+                                                            <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -281,9 +271,8 @@ background-position: center center;
                                                              alt="Card image cap">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Personal coaching</h4>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                                card's content.</p>
-                                                            <a class="btn btn-primary">Purchase</a>
+                                                            <p class="card-text">Whether you are working toward a goal, feeling stuck or wanting more balance, personal coaching with a certified life coach can help you be more fulfilled!</p>
+                                                            <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -293,9 +282,8 @@ background-position: center center;
                                                              alt="Card image cap">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Crossfit</h4>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                                card's content.</p>
-                                                            <a class="btn btn-primary">Purchase</a>
+                                                            <p class="card-text">It is a lifestyle characterized by safe, effective exercise and sound nutrition.It can be used to accomplish any goal, from improved health to weight loss to better performance. The program works for everyone?people who are just starting out and people who have trained for years.</p>
+                                                            <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -305,9 +293,8 @@ background-position: center center;
                                                              alt="Card image cap">
                                                         <div class="card-body">
                                                             <h4 class="card-title">Boxing</h4>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                                                card's content.</p>
-                                                            <a class="btn btn-primary">Purchase</a>
+                                                            <p class="card-text">It is not just an arm workout. When done properly, it is a full body workout? Legs, core, back, shoulders, and arms as well as a cardiovascular workout.</p>
+                                                            <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">MORE</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -362,7 +349,8 @@ background-position: center center;
                         </div>
                     </section>  
                         
-                   </     
+                    <br>
+                    <br>
                      <!---Footer--->   
                     <%@include file="footer.jsp" %>       
                         
