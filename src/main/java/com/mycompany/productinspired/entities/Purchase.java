@@ -104,13 +104,13 @@ public class Purchase implements Serializable {
         this.user = user;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
+//    public List<Product> getProducts() {
+//        return products;
+//    }
+//
+//    public void setProducts(List<Product> products) {
+//        this.products = products;
+//    }
 
     @Override
     public int hashCode() {
@@ -119,7 +119,7 @@ public class Purchase implements Serializable {
         hash = 23 * hash + Objects.hashCode(this.date);
         hash = 23 * hash + Objects.hashCode(this.user);
         hash = 23 * hash + this.pending;
-        hash = 23 * hash + Objects.hashCode(this.products);
+//        hash = 23 * hash + Objects.hashCode(this.products);
         return hash;
     }
 
@@ -147,15 +147,15 @@ public class Purchase implements Serializable {
         if (!Objects.equals(this.user, other.user)) {
             return false;
         }
-        if (!Objects.equals(this.products, other.products)) {
-            return false;
-        }
+//        if (!Objects.equals(this.products, other.products)) {
+//            return false;
+//        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Purchase{" + "id=" + id + ", date=" + date + ", user=" + user + ", pending=" + pending + ", products=" + products + '}';
+        return "Purchase{" + "id=" + id + ", date=" + date + ", user=" + user + ", pending=" + pending + '}';
     }
     
 }
