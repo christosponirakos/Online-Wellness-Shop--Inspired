@@ -147,8 +147,8 @@
                                                 <td align="right">
                                                     <a href="<c:url value='${purchaseurl}/${product.productId}'/>" class="btn btn-warning">
                                                         <span class="fa fa-shopping-cart"></span>Purchase
-                                                    </a
-
+                                              </a>
+                                        
 
                                                 </td>
                                             </tr>
