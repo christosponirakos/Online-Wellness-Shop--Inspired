@@ -19,8 +19,8 @@ public class ProductsController {
 
     @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
     public String getAllProducts(ModelMap view) {
-        List<Product> products = productsService.getAllProducts();
-        view.addAttribute("products", products);
+//        List<Product> products = productsService.getAllProducts();
+//        view.addAttribute("products", products);
         return ("productList");
 
     }

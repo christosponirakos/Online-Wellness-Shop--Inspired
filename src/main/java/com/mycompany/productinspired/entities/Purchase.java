@@ -37,30 +37,20 @@ public class Purchase implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(nullable = false)
     private int id;
 
-    @Basic(optional = false)
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
     
     
-    @Basic(optional = false)
-    @NotNull
-//    @Column(name = "user_id", nullable = false)
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "id")
     private User user;
 
-    
-    
-    
-    @Basic(optional = false)
-    @NotNull
-    @Column(nullable = false)
     private short pending;
 
     

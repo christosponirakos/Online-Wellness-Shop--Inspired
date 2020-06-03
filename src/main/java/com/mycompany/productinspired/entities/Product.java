@@ -2,15 +2,12 @@
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import org.springframework.transaction.annotation.Transactional;
 
 @Entity
@@ -22,42 +19,26 @@ public class Product implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id", nullable = false)
+    @Column(name= "id")
     private Integer productId;
     
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "title",nullable = false, length = 45)
+
     private String title;
     
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "price",nullable = false)
+
     private double price;
     
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "short_description",nullable = false, length = 200)
+
+    @Column(name = "short_description")
     private String shortDescription;
     
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 200)
-    @Column(name = "details",nullable = false, length = 500)
+
     private String details;
     
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "duration", nullable = false)
+
     private int duration;
     
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(nullable = false, length = 45)
+
     private String category;
 
    

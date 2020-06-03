@@ -2,15 +2,12 @@ package com.mycompany.productinspired.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import org.springframework.transaction.annotation.Transactional;
 
 @Entity
@@ -22,44 +19,27 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Basic(optional = false)
-    @Size(min = 1, max = 30)
-    @Column(name = "sso_id", nullable = false, unique = true, length = 30)
+    @Column(name = "sso_id")
     private String userName;
 
-    @Basic(optional = false)
-    @Size(min = 1, max = 100)
-    @Column(nullable = false, length = 100)
     private String password;
 
-    @Basic(optional = true)
-    @Size(min = 1, max = 45)
-    @Column(name = "first_name", length = 45)
+
+    @Column(name = "first_name")
     private String firstName;
 
-    @Basic(optional = true)
-    @Size(min = 1, max = 45)
-    @Column(name = "last_name", length = 45)
+
+    @Column(name = "last_name")
     private String lastName;
 
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(length = 25, unique = true)
     private String email;
 
-    @Basic(optional = true)
-    @Size(min = 1, max = 60)
-    @Column(length = 60)
+
     private String address;
 
-    @Basic(optional = true)
-    @Size(min = 1, max = 45)
-    @Column(length = 45, unique = true)
+
     private String telephone;
 
 
