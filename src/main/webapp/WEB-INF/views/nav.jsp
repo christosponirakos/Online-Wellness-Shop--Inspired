@@ -15,7 +15,7 @@
 <header>
     <nav class="container-fluid navbar navbar-expand-lg navbar-light" id="mainNav">
         <!-- Logo -->
-        <a class="navbar-brand" href="/Wellness/home">
+        <a class="navbar-brand" href="/Wellness/index">
             <img src="${pageContext.request.contextPath}/static/img/wellness.png" alt="Inspired logo"
                  style="position:relative; bottom:10px; width:100px; height:100px;">
         </a>
@@ -31,7 +31,7 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/Wellness/home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/Wellness/index">Home <span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
