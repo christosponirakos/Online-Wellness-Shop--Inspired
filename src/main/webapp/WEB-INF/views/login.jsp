@@ -79,7 +79,7 @@
                     <p class="text-center "><a style="color: #fed136" href="/Wellness/register">Create an Account</a></p>
                 </div>
                 <div class="form-group">
-                    <p class="text-center "><a style="color: #fed136" href="/Wellness/categories/">Home</a></p>
+                    <p class="text-center "><a style="color: #fed136" href="/Wellness/">Home</a></p>
                 </div>
 
 
