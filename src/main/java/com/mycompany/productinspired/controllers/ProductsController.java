@@ -36,8 +36,7 @@ public class ProductsController {
         view.addAttribute("editurl", editurl);
         view.addAttribute("deleteurl", deleteurl);
         view.addAttribute("newurl", newurl);
-        return ("productList");
-
+        return ("productListUser");
     }
 
     //get form for new product
