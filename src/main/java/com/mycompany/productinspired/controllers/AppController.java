@@ -221,7 +221,7 @@ public class AppController {
             view.addAttribute("message", new String("Something went wrong! Please try again! "));
         }
        
-        return ("redirect:/login");
+        return ("registration");
     }
 
 
@@ -244,7 +244,22 @@ public class AppController {
         view.addAttribute("newurl", newurl);
         return ("adminproduct");
     }
-
+    
+    
+    @RequestMapping(value={"/login"}, method = RequestMethod.GET)
+    public String goToLogin(ModelMap view){ 
+        User user = new User();
+        view.addAttribute("user", user);        
+        view.addAttribute("pagetitle", "Inspired");
+         return "login";
+    }
+    @RequestMapping(value={"/login"}, method = RequestMethod.POST)
+    public String PostLogin(ModelMap view){ 
+             
+        view.addAttribute("pagetitle", "Inspired");
+         return "redirect:/products/list";
+    }
+    
 }
 
 
