@@ -216,8 +216,8 @@ th {
 
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="userName">User name</label>
-                        <div class="col-md-7">
+                        <label class="col-md-12 control-lable" for="userName">User name</label>
+                        <div class="col-md-12">
                             <form:input type="text" path="userName" id="userName" class="form-control input-sm"/>
                             
                                 <form:errors path="userName" cssStyle="color: #ff0000;"/>
@@ -227,8 +227,8 @@ th {
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="firstName">First name</label>
-                        <div class="col-md-7">
+                        <label class="col-md-12 control-lable" for="firstName">First name</label>
+                        <div class="col-md-12">
                             <form:input type="firstName" path="firstName" id="firstName" class="form-control input-sm" />
                             
                                 <form:errors path="firstName" cssStyle="color: #ff0000;"/>
@@ -238,8 +238,8 @@ th {
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="lastName">Last name</label>
-                        <div class="col-md-7">
+                        <label class="col-md-12 control-lable" for="lastName">Last name</label>
+                        <div class="col-md-12">
                             <form:input type="text" path="lastName" id="lastName" class="form-control input-sm" maxlength="40"/>
                            
                                 <form:errors path="lastName" cssStyle="color: #ff0000;"/>
@@ -249,8 +249,8 @@ th {
                 </div>
                <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="email">Email</label>
-                        <div class="col-md-7">
+                        <label class="col-md-12 control-lable" for="email">Email</label>
+                        <div class="col-md-12">
                             <form:input type="text" path="email" id="email" class="form-control input-sm" maxlength="40"/>
                            
                                 <form:errors path="email" cssStyle="color: #ff0000;"/>
@@ -260,8 +260,8 @@ th {
                 </div>
                                  <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="telephone">Telephone</label>
-                        <div class="col-md-7">
+                        <label class="col-md-12 control-lable" for="telephone">Telephone</label>
+                        <div class="col-md-12">
                             <form:input type="number" path="number" id="number" class="form-control input-sm" maxlength="40"/>
                            
                                 <form:errors path="number" cssStyle="color: #ff0000;"/>

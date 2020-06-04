@@ -153,7 +153,7 @@
                                     </tbody>
 
                                  </table>
-                                  <a href="<c:url value='/users/${newurl}' />" class="btn btn-info">
+                                  <a href="<c:url value='/products/${newurl}' />" class="btn btn-info">
       <span class="fa fa-plus"></span>ADD</a>
   
                                 
