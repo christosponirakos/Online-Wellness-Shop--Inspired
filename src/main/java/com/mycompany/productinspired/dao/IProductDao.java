@@ -11,9 +11,9 @@ public interface IProductDao {
     
    // public List<Product> getProductByCategory(String category);
     
-    public Product getProductById(int id);
+    public Product findProductById(int id);
     
-    public boolean addProduct(Product product); 
+    public boolean saveProduct(Product product); 
 
     public boolean updateProduct(Product product);
     

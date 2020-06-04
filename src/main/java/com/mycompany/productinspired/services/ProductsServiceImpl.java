@@ -26,13 +26,13 @@ public class ProductsServiceImpl implements IProductsService {
 //    }
 
     @Override
-    public Product getProductById(int id) {
-        return dao.getProductById(id);
+    public Product findProductById(int id) {
+        return dao.findProductById(id);
     }
 
     @Override
-    public boolean addProduct(Product p) {
-        return dao.addProduct(p);
+    public boolean saveProduct(Product p) {
+        return dao.saveProduct(p);
     }
 
     @Override

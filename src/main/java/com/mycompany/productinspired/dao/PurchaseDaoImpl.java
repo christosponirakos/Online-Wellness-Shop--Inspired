@@ -1,21 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.productinspired.dao;
 
 import com.mycompany.productinspired.entities.Purchase;
 import java.util.List;
 import org.hibernate.Criteria;
-import org.hibernate.Hibernate;
+
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author ticho
- */
 @Repository("purchaseDao")
 public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements IPurchaseDao {
 
@@ -60,6 +51,7 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements I
         Purchase db_purchase = findPurchaseById(purchase.getId());
         if (db_purchase != null) {
             db_purchase.setDate(purchase.getDate());
+            db_purchase.setUser(purchase.getUser());
             db_purchase.setPending(purchase.getPending());
 
             return savePurchase(db_purchase);

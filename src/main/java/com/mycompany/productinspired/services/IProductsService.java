@@ -8,9 +8,9 @@ public interface IProductsService {
     public List<Product> getAllProducts();
 
     // public List<Product> getProductByCategory(String category);
-    public Product getProductById(int id);
+    public Product findProductById(int id);
 
-    public boolean addProduct(Product p);
+    public boolean saveProduct(Product p);
 
     public boolean updateProduct(Product p);
 

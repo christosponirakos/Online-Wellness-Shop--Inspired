@@ -32,24 +32,23 @@ public class ProductDaoImpl extends AbstractDao<Integer,Product> implements IPro
 //    }
 
     @Override
-    public Product getProductById(int id) {
+    public Product findProductById(int id) {
         Product p = getByKey(id);
         return p;
     }
     
     @Override
-    public boolean addProduct(Product p){
-        try {
-            persist(p);
-            return true;
-        } catch (Exception e) {
+    public boolean saveProduct(Product p){
+        boolean notSaved = persist(p);
+        if (notSaved) {
             return false;
         }
+        return true;
     }
     
     @Override
     public boolean updateProduct(Product product){
-      Product db_product=getProductById(product.getProductId());
+      Product db_product=findProductById(product.getProductId());
       if(db_product !=null){ 
           db_product.setCategory(product.getCategory());
           db_product.setDetails(product.getDetails());
@@ -58,7 +57,7 @@ public class ProductDaoImpl extends AbstractDao<Integer,Product> implements IPro
           db_product.setShortDescription(product.getShortDescription());
           db_product.setTitle(product.getTitle());
           
-          return addProduct(db_product);
+          return saveProduct(db_product);
       }else{ 
           return false;
       }

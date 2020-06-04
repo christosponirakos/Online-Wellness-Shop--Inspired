@@ -22,16 +22,15 @@ public class UserController {
 
     @Autowired
     IUserService userService;
-    
+
     @Autowired
     IPurchaseService purchaseService;
-    
+
     private String listurl = "list";
     private String editurl = "edit";
     private String deleteurl = "delete";
     private String updateurl = "update";
     private String newurl = "new";
-
 
     @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
     public String listAllTrainers(ModelMap view) {
@@ -47,71 +46,70 @@ public class UserController {
     public String purchasesByUserId(ModelMap model) {
 //            String username = appService.getPrincipal();
 //            User user = userService.findById(49);
-            List<Purchase> purchases = purchaseService.getPurchasesForUserById(49);
-            model.addAttribute("purchases",purchases);
+        List<Purchase> purchases = purchaseService.getPurchasesForUserById(49);
+        model.addAttribute("purchases", purchases);
 //            model.addAttribute("loggedinuser", appService.getPrincipal());
 //            model.addAttribute("pagetitle", "My purchase");
         return "purchaseList";
     }
-         @RequestMapping("/new")
+
+    @RequestMapping("/new")
     public String newUser(ModelMap view) {
-        User user=new User();
+        User user = new User();
         view.addAttribute("user", user);
         view.addAttribute("listurl", listurl);
-        return("newuser");
-    } 
-    
-     @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public String saveTrainer(@ModelAttribute("user") @Validated User user, BindingResult bindingResult,ModelMap view) {
+        return ("newuser");
+    }
+
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    public String saveTrainer(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
         if (bindingResult.hasErrors()) {
             return "newuser";
         }
-        
-        if(userService.save(user)) {
-                   
-         
 
-		view.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " registered successfully");
-                return ("userList");
-        }
-        else {
-            
+        if (userService.save(user)) {
+
+            view.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " registered successfully");
+            return ("userList");
+        } else {
+
             view.addAttribute("message", new String("Something went wrong! Please try again! "));
         }
-            view.addAttribute("listurl", listurl);
-        return("newuser");
+        view.addAttribute("listurl", listurl);
+        return ("newuser");
     }
-    
-      @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteUser(ModelMap view, @PathVariable int id) {
-        if(userService.delete(id)) {
+        if (userService.delete(id)) {
             view.addAttribute("msg", new String("User is deleted Successfully!"));
         } else {
             view.addAttribute("msg", new String("User has not been Deleted!"));
         }
-        return("redirect:/users/list");
+        return ("redirect:/users/list");
     }
+
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editUser(ModelMap view, @PathVariable int id) {
         User user = userService.findById(id);
         view.addAttribute("user", user);
         view.addAttribute("updateurl", updateurl);
-        return("edituser");
-    }
-    @RequestMapping(value ="/update" , method = RequestMethod.POST)
-    public String updateUser(@Valid User user, BindingResult result, ModelMap view,  @PathVariable int id) {
-        
-       
-            if (result.hasErrors()) {
-                   user.setId(id);
-                   
         return ("edituser");
-			
-            }
-               userService.update(user);
-       
-		view.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " updated successfully");
-		return ("redirect:/users/list");
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String updateUser(@Valid User user, BindingResult result, ModelMap view, @PathVariable int id) {
+
+        if (result.hasErrors()) {
+            user.setId(id);
+
+            return ("edituser");
+
+        }
+        userService.update(user);
+
+        view.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " updated successfully");
+        return ("redirect:/users/list");
 //        view.addAttribute("msg", new String(""));
 //        return("redirect:/list");
     }
