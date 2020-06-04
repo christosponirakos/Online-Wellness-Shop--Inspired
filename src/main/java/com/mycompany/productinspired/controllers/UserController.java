@@ -42,16 +42,7 @@ public class UserController {
         return ("userList");
     }
 
-    @RequestMapping(value = {"/49"}, method = RequestMethod.GET)
-    public String purchasesByUserId(ModelMap model) {
-//            String username = appService.getPrincipal();
-//            User user = userService.findById(49);
-        List<Purchase> purchases = purchaseService.getPurchasesForUserById(49);
-        model.addAttribute("purchases", purchases);
-//            model.addAttribute("loggedinuser", appService.getPrincipal());
-//            model.addAttribute("pagetitle", "My purchase");
-        return "purchaseList";
-    }
+    
   
 
     @RequestMapping("/new")
@@ -62,12 +53,11 @@ public class UserController {
         return ("newuser");
     }
 
-    @RequestMapping(value = "/new", method = RequestMethod.POST)
-<<<<<<< HEAD
+
+   
+
     public String saveUser(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
-=======
-    public String saveTrainer(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
->>>>>>> origin/master
+
         if (bindingResult.hasErrors()) {
             return "newuser";
         }
