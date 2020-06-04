@@ -6,9 +6,8 @@
         
         <link href="<c:url value='/static/css/styles.css' />" type="text/css" rel="stylesheet"></link>
        
-       <link href="<c:url value='/resources/css/styles.css' />" rel="stylesheet"></link>
-      <!-- <script src="<c:url value="https://use.fontawesome.com/releases/v5.12.1/js/all.js"/>"</script> SHOWS BLANK PAGE?--> 
-        
+      
+      
         <title>Purchases' List</title>
         <style>
        
@@ -115,7 +114,7 @@
 
                             </div>
 
-
+<a href="<c:url value='/new' />"
 
 
 

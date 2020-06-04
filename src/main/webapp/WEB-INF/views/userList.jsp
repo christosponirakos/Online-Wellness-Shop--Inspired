@@ -86,7 +86,7 @@
                                                         <span class="fa fa-pencil"></span>Update
                                                     </a>
                                                     <a href="<c:url value='${deleteurl}/${user.id}' />" class="btn btn-danger">
-                                                        <span class="fa fa-trash"></span> Delete
+                                                        <span class="fa fa-trash"></span>Delete
                                                     </a>
                                         </td>
                                             </tr>
@@ -105,7 +105,7 @@
         
                             </tbody>
                             </table>
-  <a href="<c:url value='/new' />" class="btn btn-info">
+  <a href="<c:url value='/users/${newurl}' />" class="btn btn-info">
       <span class="fa fa-plus"></span>ADD</a>
                                    
                         

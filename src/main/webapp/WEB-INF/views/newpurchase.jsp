@@ -68,7 +68,7 @@
                                 <div class="form-group col-md-12">
                                     <label class="col-md-12 control-lable" for="pending">Pending</label>
                                     <div class="col-md-12">
-                                        <form:input type="text" path="pending" id="pending" class="form-control input-sm"/>
+                                        <form:input type="number" path="pending" id="pending" class="form-control input-sm"/>
                                         <form:errors path="pending" cssStyle="color: #ff0000;"/>
                                     </div>
                                 </div>

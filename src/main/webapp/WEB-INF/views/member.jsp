@@ -79,7 +79,7 @@ header.masthead {
                     <div class="card-body">
                       <h4 class="card-title">Are you eating enough proteins?</h4>
                       <p class="card-text">Check how to calculate your needs and your daily amount.</p>
-                       <a href = "${pageContext.request.contextPath}/Wellness/proteins" class ="btn btn-primary">Discover</a>
+                       <a href = "${pageContext.request.contextPath}/section/proteins" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>

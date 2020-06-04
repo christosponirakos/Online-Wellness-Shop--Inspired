@@ -1,32 +1,17 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<!DOCTYPE html>
+<%@include file="setup.jsp" %>
 <html>
     <head>
-        <link rel="icon" type="image/x-icon" href="assets/img/wellness.png" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <!---  <link href="css/styles.css" rel="stylesheet" /> --> 
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <%@include file="head.jsp" %>
 
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link href="css/styles.css" rel="stylesheet" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit a purchase</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
-        <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
+
+        <link href="<c:url value='/static/css/styles.css' />" type="text/css" rel="stylesheet"></link>
+
+        <title>Edit a product</title>
+
         <style>
+        
+        
+    
             body {
                 height: 100%;
                 background-color:rgb(245, 245, 245);
@@ -210,7 +195,7 @@
                 %>
 
 
-                <form:form  id="form" method="POST" action="${updateUrlFINAL}" modelAttribute="purchase" class="form-horizontal">
+                <form:form  id="form" method="POST" action="${updateURLFINAL}" modelAttribute="purchase" class="form-horizontal">
                     <form:input type="hidden" path="id" id="id" />
 
                     <div class="row">
