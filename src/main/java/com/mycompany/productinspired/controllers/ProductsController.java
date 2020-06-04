@@ -55,12 +55,12 @@ public class ProductsController {
         }
         if (productsService.saveProduct(product)) {
             view.addAttribute("success", "You have successfully added a new product");
-            return ("productList");
+            return ("redirect:/products/list");
         } else {
             view.addAttribute("message", new String("Something wrong!Product was not added please try again!"));
         }
         view.addAttribute("listurl", listurl);
-        return ("newproduct");
+        return ("redirect:/products/list");
     }
 
     @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
