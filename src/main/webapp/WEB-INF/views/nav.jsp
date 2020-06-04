@@ -37,6 +37,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Wellness/about">About</a>
                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/Wellness/member">Blog</a>
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -62,7 +65,7 @@
     <div class="dropdown-menu">
       <a class="dropdown-item" href="/Wellness/register">Register now</a>
       <a class="dropdown-item" href="/Wellness/login">Login</a>
-      <a class="dropdown-item" href="/Wellness/member">Members' section</a>
+     
     </div>
   </div>
 

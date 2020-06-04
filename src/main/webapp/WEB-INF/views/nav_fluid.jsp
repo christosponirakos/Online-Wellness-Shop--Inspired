@@ -37,7 +37,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Wellness/about">About</a>
                 </li>
-
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/Wellness/member">Blog</a>
+                </li>
+              
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
@@ -48,27 +52,30 @@
                         <a class="dropdown-item" href="/Wellness/products/">All products</a>
                         <a class="dropdown-item" href="/Wellness/products/nutrition">Nutrition</a>
                         <a class="dropdown-item" href="/Wellness/products/fitness">Fitness</a>
+                        
                      
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Wellness/contact">Contact</a>
+                    
                 </li>
 
                 
                 
               
                 
-          <!--      <sec:authorize access="hasRole('ADMIN')">
+          <!--   <sec:authorize access="hasRole('ADMIN')">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            Admin
+                         
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/Wellness/admin/customers">Customers</a>
-                            <a class="dropdown-item" href="/Wellness/admin/orders/pending">Pending Orders</a>
-                            <a class="dropdown-item" href="/Wellness/admin/orders/done">Completed orders</a>
+                            <a class="dropdown-item" href="/Wellness/admin/profile">My profile</a>
+                            <a class="dropdown-item" href="/Wellness/admin/purchases/list">Purchases</a>
+                            <a class="dropdown-item" href="/Wellness/admin/users/list">Users</a>
+                            <a class="dropdown-item" href="/Wellness/admin/products/list">Products</a>
                         </div>
                     </li>
                 </sec:authorize>
@@ -76,21 +83,21 @@
             </ul> -->
 
          <!--   
-            <!--Profile button 
+           Profile button 
             <button type="button" class="btn">
                 <span class="glyphicon glyphicon-cog"></span>
                 <span class="caret"></span>
-                <sec:authorize access="hasRole('ADMIN')">
+             <!--   <sec:authorize access="hasRole('ADMIN')">
                     <a href="/Wellness/admin/profile">
                         <i class="fas fa-user icon"></i>
                     </a>
-                </sec:authorize>
-                <sec:authorize access="!hasRole('ADMIN')">
+              <!--  </sec:authorize>-->
+            <!--    <sec:authorize access="!hasRole('ADMIN')">
                     <a href="/Wellness/user/profile">
                         <i class="fas fa-user icon"></i>
                     </a>
-                </sec:authorize>
-            </button> -->
+                <!--</sec:authorize>-->
+        <!--    </button>
 <div class="dropdown dropright float-right">
     <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
       
@@ -98,27 +105,27 @@
     <div class="dropdown-menu">
       <a class="dropdown-item" href="/Wellness/register">Register now</a>
       <a class="dropdown-item" href="/Wellness/login">Login</a>
-      <a class="dropdown-item" href="/Wellness/member">Members' sections</a>
+      
+    </div>
+  </div>
+-->
+     
+<div class="dropdown dropright float-right">
+    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+      
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/Wellness/register">Register now</a>
+      <a class="dropdown-item" href="/Wellness/login">Login</a>
+     
     </div>
   </div>
 
-            <!-- Register / Login dropdown 
-            <div class="btn-group dropleft">
-                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                  <!--  <span class="sr-only"><i class="fas fa-usercicon"></i>Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                     <a class="dropdown-item" href="/Wellness/register">Resigster Now</a>
-                        <a class="dropdown-item" href="/Wellness/login">Login</a>
-                        <a class="dropdown-item" href="/Wellness/chat">Chat</a>
-                </div>
-            </div>
-            -->
+           
              <!--       <sec:authorize access="hasRole('ADMIN') or hasRole('USER')"> --> 
                         
-             <!--       </sec:authorize> -->
-                </div>
+             <!--       </sec:authorize>
+                </div>-->
          
 
             <!-- Search -->
