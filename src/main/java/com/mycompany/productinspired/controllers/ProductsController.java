@@ -33,8 +33,7 @@ public class ProductsController {
     public String getAllProducts(ModelMap view) {
         List<Product> products = productsService.getAllProducts();
         view.addAttribute("products", products);
-        view.addAttribute("editurl", editurl);
-        view.addAttribute("deleteurl", deleteurl);
+       
         
         view.addAttribute("newurl", newurl);
         return ("productList");
