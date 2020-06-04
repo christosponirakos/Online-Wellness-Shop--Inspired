@@ -2,12 +2,16 @@ package com.mycompany.productinspired.controllers;
 
 import com.mycompany.productinspired.entities.Product;
 import com.mycompany.productinspired.entities.Purchase;
+import com.mycompany.productinspired.entities.User;
 import com.mycompany.productinspired.services.IProductsService;
 import com.mycompany.productinspired.services.IPurchaseService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +24,7 @@ public class PurchaseController {
     private String editurl = "edit";
     private String deleteurl = "delete";
     private String updateurl = "update";
+    private String newurl = "new";
 
     @Autowired
     IPurchaseService purchaseService;
@@ -31,6 +36,9 @@ public class PurchaseController {
     public String listAllPurchases(ModelMap view) {
         List<Purchase> purchases = purchaseService.findAllPurchasess();
         view.addAttribute("purchases", purchases);
+        view.addAttribute("editurl", editurl);
+        view.addAttribute("deleteurl", deleteurl);
+        view.addAttribute("newurl", newurl);
         return ("purchaseList");
     }
 
@@ -43,14 +51,19 @@ public class PurchaseController {
     }
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public String savePurchase(ModelMap view, Purchase purchase) {
-        if (purchaseService.savePurchase(purchase)) {
-            view.addAttribute("message", new String("All good!"));
-        } else {
-            view.addAttribute("message", new String("All wrong!"));
+    public String savePurchase(ModelMap view, @ModelAttribute("purchase") @Validated Purchase purchase, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "newpurchase";
         }
-        view.addAttribute("listurl", listurl);
-        return ("newpurchase");
+        if(purchaseService.savePurchase(purchase)) {
+		view.addAttribute("success", "Purchase " + purchase.getId() + " "+ purchase.getDate() + " registered successfully");
+                return ("purchaseList");
+        }
+        else {
+            view.addAttribute("message", new String("Something went wrong! Please try again! "));
+        }
+            view.addAttribute("listurl", listurl);
+        return("newpurchase");
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
