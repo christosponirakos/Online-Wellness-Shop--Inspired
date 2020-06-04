@@ -102,7 +102,7 @@
 
     <body>
         <div class="signup-form">
-            <form:form action="/Wellness/${action}" method="POST" modelAttribute="user">
+            <form:form action="/Wellness/register" method="POST" modelAttribute="user">
                 <form:input type="hidden" path="id" id="id"/>
                 <h2>Register</h2>
                 <p class="hint-text">Create your account. It's free and only takes a minute.</p>
