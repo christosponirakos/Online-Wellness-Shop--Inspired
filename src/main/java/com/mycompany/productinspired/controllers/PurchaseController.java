@@ -63,7 +63,7 @@ public class PurchaseController {
             view.addAttribute("message", new String("Something went wrong! Please try again! "));
         }
             view.addAttribute("listurl", listurl);
-        return("newpurchase");
+        return("purchaseList");
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
