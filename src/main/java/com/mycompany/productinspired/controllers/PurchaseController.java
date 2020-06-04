@@ -88,6 +88,7 @@ public class PurchaseController {
     public String updatePurchase(ModelMap view, Purchase purchase) {
         purchaseService.updatePurchase(purchase);
         view.addAttribute("msg", new String(""));
+       
         return ("redirect:/purchases/list");
     }
     

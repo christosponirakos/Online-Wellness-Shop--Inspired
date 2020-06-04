@@ -124,7 +124,7 @@ background: linear-gradient(90deg, rgba(36,0,5,1) 0%, rgba(121,9,15,1) 36%, rgba
                     <div class="card-body">
                       <h4 class="card-title">Eating Well as You Age</h4>
                       <p class="card-text">Getting older doesnt mean that life is not full of pleasures or positive energy! Check out what to rememeber!</p>
-                     <a href = "boxing.html" class ="btn btn-primary">Discover</a>
+                     <a href = "${pageContext.request.contextPath}/age" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ background: linear-gradient(90deg, rgba(36,0,5,1) 0%, rgba(121,9,15,1) 36%, rgba
                     <div class="card-body">
                       <h4 class="card-title">What happens to your boyd when you quit sugar?</h4>
                       <p class="card-text">Heard about the benefits? Try it for yourself!</p>
-                      <a href = "${pageContext.request.contextPath}/boxing" class ="btn btn-primary">Discover</a>
+                      <a href = "${pageContext.request.contextPath}/sugar" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>

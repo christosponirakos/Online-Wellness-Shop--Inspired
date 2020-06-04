@@ -189,13 +189,14 @@
         <body>
             <div class="generic-container">
                 <h2>Edit a Purchase</h2>
-                <%
-                    String updateUrlFINAL = request.getContextPath() + "/purchases/" + request.getAttribute("updateurl");
-                    session.setAttribute("updateUrlFINAL", updateUrlFINAL);
-                %>
+               
+                            <% 
+            String updateUrlFINAL = request.getContextPath() + "/edit" + request.getAttribute("updateurl");
+            session.setAttribute("updateUrlFINAL", updateUrlFINAL);
+        %>
+       
 
-
-                <form:form  id="form" method="POST" action="${updateURLFINAL}" modelAttribute="purchase" class="form-horizontal">
+                <form:form  id="form" method="POST" action="${updateUrlFINAL}" modelAttribute="purchase" class="form-horizontal">
                     <form:input type="hidden" path="id" id="id" />
 
                     <div class="row">

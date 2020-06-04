@@ -208,7 +208,7 @@ th {
                     <div class="container">
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">Edit Inspired user</h2>
-                            <%
+                 <%
                     String updateUrlFINAL = request.getContextPath() + "/users/" + request.getAttribute("updateurl");
                     session.setAttribute("updateUrlFINAL", updateUrlFINAL);
                 %>

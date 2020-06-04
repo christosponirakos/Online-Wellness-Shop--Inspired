@@ -260,6 +260,71 @@ public class AppController {
          return "redirect:/products/list";
     }
     
+    
+    @RequestMapping(value={"/workout"}, method = RequestMethod.GET)
+    public String goToWorkout(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "workout";
+    }
+     @RequestMapping(value={"/age"}, method = RequestMethod.GET)
+    public String goToAge(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "age";
+    }
+    
+     @RequestMapping(value={"/sugar"}, method = RequestMethod.GET)
+    public String goToSugar(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "sugar";
+    }
+    
+    
+     @RequestMapping(value={"/yoga"}, method = RequestMethod.GET)
+    public String goToYoga(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "yoga";
+    }
+    
+     @RequestMapping(value={"/abs"}, method = RequestMethod.GET)
+    public String goToAbs(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "abs";
+    }
+    
+     @RequestMapping(value={"/fullbody"}, method = RequestMethod.GET)
+    public String goToFullbody(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "fullbody";
+    }
+    
+     @RequestMapping(value={"/calories"}, method = RequestMethod.GET)
+    public String goToCalories(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "calories";
+    }
+    
+      @RequestMapping(value={"/plan"}, method = RequestMethod.GET)
+    public String goToPlan(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "plan";
+    }
+    
+    
+      @RequestMapping(value={"/boxing"}, method = RequestMethod.GET)
+    public String goToBoxing(ModelMap view){ 
+               
+        view.addAttribute("pagetitle", "Inspired");
+         return "boxing";
+    }
+    
 }
 
 
