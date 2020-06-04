@@ -2,7 +2,9 @@ package com.mycompany.productinspired.controllers;
 
 
 import com.mycompany.productinspired.dao.IProductDao;
+import com.mycompany.productinspired.entities.Product;
 import com.mycompany.productinspired.entities.User;
+import com.mycompany.productinspired.services.IProductsService;
 import com.mycompany.productinspired.services.IUserService;
 import java.util.List;
 
@@ -29,8 +31,18 @@ import org.springframework.validation.annotation.Validated;
 @RequestMapping("/")
 public class AppController {
     
+    private String listurl = "list";
+    private String editurl = "edit";
+    private String deleteurl = "delete";
+    private String updateurl = "update";
+    private String newurl = "new";
+
+    
     @Autowired
     IUserService userService;
+    
+    @Autowired
+    IProductsService productsService;
     
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String goHome(ModelMap model) {
@@ -219,6 +231,18 @@ public class AppController {
         
         view.addAttribute("pagetitle", "Inspired");
          return "admin";
+    }
+    
+    
+    
+     @RequestMapping(value = { "/admin/products/list"}, method = RequestMethod.GET)
+    public String getAllProducts(ModelMap view) {
+        List<Product> products = productsService.getAllProducts();
+        view.addAttribute("products", products);
+        view.addAttribute("editurl", editurl);
+        view.addAttribute("deleteurl", deleteurl);
+        view.addAttribute("newurl", newurl);
+        return ("adminproduct");
     }
 
 }

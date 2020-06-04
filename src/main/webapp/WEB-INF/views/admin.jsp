@@ -129,13 +129,13 @@
                             <br>
                             <div class="row profile-form">
                                 <div class="col-md-8">
-                                    <a class="btnUpdate" href="<c:url value="${pageContext.request.contextPath}/product/list"/>">Products' list</a>
+                                    <a class="btnUpdate" href="<c:url value="${request.contextPath}/admin/products/list"/>">Products' list</a>
                                 </div>
                                 <div class="col-md-8">
-                                    <a class="btnUpdate" href="<c:url value="${pageContext.request.contextPath}/users/list"/>">Users' list</a>
+                                    <a class="btnUpdate" href="<c:url value="${request.contextPath}/users/list"/>">Users' list</a>
                                 </div>  
                                 <div class="col-md-8">
-                                    <a class="btnUpdate" href="<c:url value="${pageContext.request.contextPath}/purchases/list"/>">Purchases' list</a>
+                                    <a class="btnUpdate" href="<c:url value="${request.contextPath}/purchases/list"/>">Purchases' list</a>
                                 </div>
 
                             </div>
