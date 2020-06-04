@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+       <%@include file="head.jsp" %>
         <title>User Registration Form</title>
         <link href="<c:url value='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' />" rel="stylesheet"></link>
         <style type="text/css">
@@ -109,51 +109,69 @@
                 <div class="form-group">
                     <div class="row">                        
                         <div class="col-sm-12 col-md-6">
-                            <label class="sr-only" for="firstName">First Name</label>
-                            <form:input type="text" placeholder="First Name" path="customer.fname" id="firstName" class="form-control" required="true"/>
-                            <div class="has-error">
-                                <form:errors path="customer.fname" class="help-inline"/>
-                            </div>
+                            <label class="sr-only" for="firstName">Username</label>
+                            <form:input type="text" placeholder="Username" path="userName" id="userName" class="form-control" required="true"/>
+                           
+                                <form:errors path="customer.fname" cssStyle="color: #ff0000;"/>
+                           
                         </div>
                         <div class="col-sm-12 col-md-6">
-                            <label class="sr-only" for="lastName">Last Name</label>
-                            <form:input type="text" path="customer.lname" id="lastName" class="form-control" placeholder="Last Name" required="true" />
-                            <div class="has-error">
-                                <form:errors path="customer.lname" class="help-inline"/>
-                            </div>
+                            <label class="sr-only" for="lastName">First name</label>
+                            <form:input type="text" path="firstName" id="firstName" class="form-control" placeholder="First Name" required="true" />
+                          
+                                <form:errors path="firstName" cssStyle="color: #ff0000;"/>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="sr-only" for="ssoId">Username</label>
-                    <c:choose>
-                        <c:when test="${edit}">
-                            <form:input type="text" path="ssoId" id="ssoId" class="form-control" disabled="true" placeholder="Username" required="true"/>
-                        </c:when>
-                        <c:otherwise>
-                            <form:input type="text" path="ssoId" id="ssoId" class="form-control" placeholder="Username" required="true" />
-                            <div class="has-error">
-                                <form:errors path="ssoId" class="help-inline"/>
-                                <span class="help-inline">${ssoIdNotUnique}</span>
-                            </div>
-                        </c:otherwise>
-                    </c:choose>
+                     <div class="col-sm-12 col-md-6">
+                            <label class="sr-only" for="lastName">Last name</label>
+                            <form:input type="text" path="lastName" id="lastName" class="form-control" placeholder="Last Name" required="true" />
+                          
+                                <form:errors path="lastName" cssStyle="color: #ff0000;"/>
+                            
+                        </div>
+                    </div>
                 </div>
+             
                 <div class="form-group">
                     <label class="sr-only" for="email">Email</label>
-                    <form:input type="email" name="customer.email" path="customer.email" id="email" class="form-control" placeholder="Email" required="true"/>
-                    <div class="has-error">
-                        <form:errors path="customer.email" class="help-inline"/>
-                        <span class="help-inline">${emailnotUnique}</span>
+                    <form:input type="email" name="email" path="email" id="email" class="form-control" placeholder="Email" required="true"/>
+                  
+                        <form:errors path="email" cssStyle="color: #ff0000;"/>
+                       
                     </div>
+        </div>
+                </div>
+   
+                <div class="form-group">
+                    <label class="sr-only" for="email">Address</label>
+                    <form:input type="text" name="address" path="address" id="address" class="form-control" placeholder="Address" required="true"/>
+                  
+                        <form:errors path="email" cssStyle="color: #ff0000;"/>
+                       
+                    </div>
+        </div>
+                </div>
+   
+                <div class="form-group">
+                    <label class="sr-only" for="email">Telephone</label>
+                    <form:input type="number" name="telephone" path="telephone" id="telephone" class="form-control" placeholder="Telephone" required="true"/>
+                  
+                        <form:errors path="telephone" cssStyle="color: #ff0000;"/>
+                       
+                    </div>
+        </div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="password">Password</label>
                     <form:input type="password" path="password" id="password" class="form-control" placeholder="Password" required="true" />
-                    <div class="has-error">
-                        <form:errors path="password" class="help-inline"/>
-                    </div>
+                   
+                        <form:errors path="password"cssStyle="color: #ff0000;"/>
+                   
                 </div>
+</div>
+</div>
                 <!--                <div class="form-group">
                                     <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"
                                            required="required">
