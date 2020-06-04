@@ -24,14 +24,13 @@ import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/")
-//@SessionAttributes("roles")
 public class AppController {
     
-    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String goHome(ModelMap model) {
        // model.addAttribute("loggedinuser", appService.getPrincipal());
         model.addAttribute("pagetitle", "Inspired");
-        return "homepage";
+        return "index";
     }
 
     @RequestMapping(value = {"/categories/"}, method = RequestMethod.GET)
