@@ -98,8 +98,8 @@ public class UserController {
         view.addAttribute("updateurl", updateurl);
         return("edituser");
     }
-    @RequestMapping(value ="/edit/{id}" , method = RequestMethod.POST)
-    public String updateTrainer(@Valid User user, BindingResult result, ModelMap view,  @PathVariable int id) {
+    @RequestMapping(value ="/update" , method = RequestMethod.POST)
+    public String updateUser(@Valid User user, BindingResult result, ModelMap view,  @PathVariable int id) {
         
        
             if (result.hasErrors()) {

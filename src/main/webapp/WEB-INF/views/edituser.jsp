@@ -202,12 +202,16 @@ th {
                     <div class="container">
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">Edit Inspired user</h2>
+                            <%
+                    String updateUrlFINAL = request.getContextPath() + "/users/" + request.getAttribute("updateurl");
+                    session.setAttribute("updateUrlFINAL", updateUrlFINAL);
+                %>
                            
                         </div>
                     </div>
         <div class="generic-container">
           
-            <form:form  id="form" method="POST" action="{id}" modelAttribute="user" class="form-horizontal">
+            <form:form  id="form" method="POST" action="${updateUrlFINAL}" modelAttribute="user" class="form-horizontal">
                 <form:input type="hidden" path="id" id="id" />
 
                 <div class="row">
