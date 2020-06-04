@@ -90,7 +90,7 @@ public class ProductsController {
     
     @RequestMapping(value = {"/nutrition"}, method = RequestMethod.GET)
     public String getNutritionProducts(ModelMap model) {
-        List<Product> products=productsService.getProductByCategory("meat");
+        List<Product> products=productsService.getProductByCategory("nutrition");
         model.addAttribute("products", products);
        
         model.addAttribute("pagetitle", "Nutrition Products");
@@ -102,7 +102,7 @@ public class ProductsController {
     
       @RequestMapping(value = {"/fitness"}, method = RequestMethod.GET)
     public String getFitnessProducts(ModelMap model) {
-        List<Product> products=productsService.getProductByCategory("vegeterian");
+        List<Product> products=productsService.getProductByCategory("fitness");
         model.addAttribute("products", products);
        
         model.addAttribute("pagetitle", "Nutrition Products");
