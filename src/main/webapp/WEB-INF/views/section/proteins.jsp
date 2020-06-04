@@ -72,7 +72,7 @@
                               <h2 class="display-6">DO YOU WANT TO DISCOVER MORE?</h2>
                               <p class="lead">Take a look at our offers!</p> 
                               <br>
-                              <a class="btn btn-primary" href="fitness.html">Discover</a>
+                              <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">Discover</a>
                             </div>
                           </div>
         

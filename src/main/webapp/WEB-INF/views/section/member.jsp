@@ -147,13 +147,13 @@ header.masthead {
     
                 <div class="col-md-4 clearfix d-none d-md-block">
                   <div class="card mb-2">
-                    <img class="card-img-top" src="${pageContext.request.contextPath}/static/img/sugar.jpg"
+                    <img class="card-img-top" src="${pageContext.request.contextPath}/static/img/nosugar.jpg"
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">What happens to your boyd when you quit sugar?</h4>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                      <a href = "boxing.html" class ="btn btn-primary">Discover</a>
+                      <a href = "boxing" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>

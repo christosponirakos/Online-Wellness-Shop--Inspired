@@ -7,7 +7,7 @@
                                 <div class="col-lg-4 my-3 my-lg-0">
                                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
-                                <div class="col-lg-4 text-lg-right"><a class="mr-3" href="${pageContext.request.contextPath}/privacy">Privacy Policy</a><a href="${pageContext.request.contextPath}/terms">Terms of Use</a></div>
+                                <div class="col-lg-4 text-lg-right"><a class="mr-3" href="/views/privacy.jsp">Privacy Policy</a><a href="/views/terms.jsp">Terms of Use</a></div>
                             </div>
                         </div>
                     </footer>

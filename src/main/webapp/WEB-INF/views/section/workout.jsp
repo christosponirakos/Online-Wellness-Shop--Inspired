@@ -146,7 +146,7 @@
                 <h2 class="display-6">DO YOU WANT TO LEARN MORE?</h2>
                 <p class="lead">Take a look in our nutrition products</p> 
                 <br>
-                <a class="btn btn-primary" href="fitness.html">Discover</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/products/list">Discover</a>
             </div>
         </div>
 
