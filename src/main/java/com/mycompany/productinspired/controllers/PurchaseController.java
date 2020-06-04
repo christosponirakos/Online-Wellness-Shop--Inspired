@@ -57,13 +57,13 @@ public class PurchaseController {
         }
         if(purchaseService.savePurchase(purchase)) {
 		view.addAttribute("success", "Purchase " + purchase.getId() + " "+ purchase.getDate() + " registered successfully");
-                return ("purchaseList");
+                return ("redirect:/purchases/list");
         }
         else {
             view.addAttribute("message", new String("Something went wrong! Please try again! "));
         }
             view.addAttribute("listurl", listurl);
-        return("newpurchase");
+        return("redirect:/purchases/list");
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
