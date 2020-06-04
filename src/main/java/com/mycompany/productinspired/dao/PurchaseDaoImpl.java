@@ -1,14 +1,28 @@
 package com.mycompany.productinspired.dao;
 
+import com.mycompany.productinspired.entities.Product;
 import com.mycompany.productinspired.entities.Purchase;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.criteria.Root;
 import org.hibernate.Criteria;
+import org.hibernate.criterion.CriteriaQuery;
 
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+
 @Repository("purchaseDao")
 public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements IPurchaseDao {
+    
+    
+
+
 
     @Override
     public List<Purchase> findAllPurchasess() {
@@ -69,4 +83,21 @@ public class PurchaseDaoImpl extends AbstractDao<Integer, Purchase> implements I
         return purchaseList;
     }
 
+//    @Override
+//    public List<Product> getAllProductsForPurchaseId(int id) {
+//    // System.out.println("-- find employees with supervisor Denise --");
+//       
+//      CriteriaBuilder cb = em.getCriteriaBuilder();
+//      CriteriaQuery<Purchase> query = cb.createQuery(Purchase.class);
+//      
+//      
+//      Root<Purchase> purchase = query.from(Purchase.class);
+//      ListJoin<Purchase, Product> products = purchase.join(Employee_.tasks);
+//      query.select(product)
+//           .where(cb.equal(tasks.get(Task_.supervisor), "Denise"))
+//           .distinct(true);
+//      TypedQuery<Employee> typedQuery = em.createQuery(query);
+//      typedQuery.getResultList().forEach(System.out::println);
+//  }
+//    }
 }

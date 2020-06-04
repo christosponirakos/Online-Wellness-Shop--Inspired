@@ -20,7 +20,5 @@ public interface IProductDao {
     public boolean deleteProductById(int id);
     
     public List<Product> getProductByPurchaseId(int id);
-
-    
     
 }

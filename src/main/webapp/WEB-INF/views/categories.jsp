@@ -71,7 +71,7 @@
 
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted"> <a href="${pageContext.request.contextPath}/products/list" class="btn btn-outline-warning "> See More</a></small>
+                                    <small class="text-muted"> <a href="${pageContext.request.contextPath}/products/nutrition" class="btn btn-outline-warning "> See More</a></small>
                                 </div>
                             </div>
                             <div class="card">
@@ -81,7 +81,7 @@
                                     <p class="card-text">Lacking motivation to get back into the gym? Back in the gym already but feel stagnated? Or maybe you?re just looking for new inspiration for a the new year. We are here for you offering the best deals!
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted"> <a href="${pageContext.request.contextPath}/products/list" class="btn btn-outline-warning "> See More</a></small>
+                                    <small class="text-muted"> <a href="${pageContext.request.contextPath}/products/fitness" class="btn btn-outline-warning "> See More</a></small>
                                 </div>
                             </div>
                         </div>

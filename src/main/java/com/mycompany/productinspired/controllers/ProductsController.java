@@ -91,24 +91,24 @@ public class ProductsController {
     
     @RequestMapping(value = {"/nutrition"}, method = RequestMethod.GET)
     public String getNutritionProducts(ModelMap model) {
-        List<Product> nutritionProducts=productsService.getProductByCategory("nutrition");
-        model.addAttribute("nutritionProducts", nutritionProducts);
+        List<Product> products=productsService.getProductByCategory("meat");
+        model.addAttribute("products", products);
        
         model.addAttribute("pagetitle", "Nutrition Products");
        // model.addAttribute("loggedinuser", appService.getPrincipal());        
-        return "nutritionProducts";
+        return "productList";
     }
     
     
     
       @RequestMapping(value = {"/fitness"}, method = RequestMethod.GET)
     public String getFitnessProducts(ModelMap model) {
-        List<Product> fitnessProducts=productsService.getProductByCategory("fitness");
-        model.addAttribute("fitnessProducts", fitnessProducts);
+        List<Product> products=productsService.getProductByCategory("vegeterian");
+        model.addAttribute("products", products);
        
         model.addAttribute("pagetitle", "Nutrition Products");
        // model.addAttribute("loggedinuser", appService.getPrincipal());        
-        return "fitnessProducts";
+        return "productList";
     }
     
     

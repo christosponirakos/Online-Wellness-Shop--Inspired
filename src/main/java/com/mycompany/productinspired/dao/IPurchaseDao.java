@@ -1,6 +1,7 @@
 package com.mycompany.productinspired.dao;
 
 
+import com.mycompany.productinspired.entities.Product;
 import com.mycompany.productinspired.entities.Purchase;
 import java.util.List;
 
@@ -16,7 +17,11 @@ public interface IPurchaseDao {
     
     public boolean savePurchase(Purchase purchase);
     
-   public List<Purchase> getPurchasesForUserById(int id);
+    public List<Purchase> getPurchasesForUserById(int id);
+    
+  //  public List<Product> getAllProductsForPurchaseId(int id);
+   
+   
    
 //    
 //    public List<Purchase> getPendingPurchases();
