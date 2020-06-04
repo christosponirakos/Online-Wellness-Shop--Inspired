@@ -194,7 +194,7 @@ public class AppController {
 
 
  @RequestMapping(value = {"/register"}, method = RequestMethod.POST)
-    public String saveUser(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
+    public String saveRegistration(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
 
         if (bindingResult.hasErrors()) {
             return "registration";
@@ -203,22 +203,29 @@ public class AppController {
         if (userService.save(user)) {
 
             view.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " registered successfully");
-            return ("redirect:login");
+            return ("redirect:/login");
         } else {
 
             view.addAttribute("message", new String("Something went wrong! Please try again! "));
         }
        
-        return ("registration");
+        return ("redirect:/login");
     }
 
 
-
-
-
-
-
-
-
+  
+    @RequestMapping(value={"/admin"}, method = RequestMethod.GET)
+    public String goToAdminProfile(ModelMap view){ 
+        
+        view.addAttribute("pagetitle", "Inspired");
+         return "admin";
+    }
 
 }
+
+
+
+
+
+
+
