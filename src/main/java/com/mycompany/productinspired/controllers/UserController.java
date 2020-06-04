@@ -52,6 +52,7 @@ public class UserController {
 //            model.addAttribute("pagetitle", "My purchase");
         return "purchaseList";
     }
+  
 
     @RequestMapping("/new")
     public String newUser(ModelMap view) {
@@ -62,7 +63,11 @@ public class UserController {
     }
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
+<<<<<<< HEAD
+    public String saveUser(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
+=======
     public String saveTrainer(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
+>>>>>>> origin/master
         if (bindingResult.hasErrors()) {
             return "newuser";
         }
@@ -113,4 +118,43 @@ public class UserController {
 //        view.addAttribute("msg", new String(""));
 //        return("redirect:/list");
     }
+    
+      @RequestMapping(value = {"/51"}, method = RequestMethod.GET)
+    public String purchasesByUserId(ModelMap model) {
+//            String username = appService.getPrincipal();
+//            User user = userService.findById(49);
+        List<Purchase> purchases = purchaseService.getPurchasesForUserById(51);
+        model.addAttribute("purchases", purchases);
+//            model.addAttribute("loggedinuser", appService.getPrincipal());
+//            model.addAttribute("pagetitle", "My purchase");
+        return "purchaseList";
+    }
+    
+    
+    
+    //πρωτο id ειναι του user 2ο id ειναι του pyrchase
+    //δηλαδη το path ειναι : Wellness/users/userID/purchases/41 ?????? μονο για το ενδιαμεσο purhases δεν ειμαι σιγουρη 
+    //με το getPrincipal θα παιρνουμε το id του user.......
+    @RequestMapping(value={"purchases/delete/{id}"}, method=RequestMethod.GET)
+    public String deletePurchasesByUserId(ModelMap model, @PathVariable int id){
+           // String username = appService.getPrincipal();    //Η appService εχει μονο την getPrincipal= η οποια θα μας γυρναει το username.
+           
+           // int id1 = userService.getUserByUsername(username).getUserId();
+           // User user = userService.findById(id1);
+       // List<Purchase> purchases = purchaseService.getPurchasesForUserById(51);
+       // model.addAttribute("purchases", purchases);
+         if (purchaseService.deletePurchaseById(id)) {
+            model.addAttribute("msg", new String("User is deleted Successfully!"));
+        } else {
+            model.addAttribute("msg", new String("User has not been Deleted!"));
+        }
+        return ("redirect:/users/51");
+        
+           
+}
+    
+    
+    
+    
+    
 }
