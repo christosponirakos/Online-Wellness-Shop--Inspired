@@ -101,20 +101,11 @@
                 <section class="page-section bg-light">
                     <div class="container">
                         <div class="text-center">
-                            <h2 class="section-heading text-uppercase">Our products</h2>
-                            <h3 class="section-subheading text-muted">To eat and exercise is a necessity, but to do them intelligently is an
-                                art </h3>
+                            <h2 class="section-heading text-uppercase">List of products</h2>
+                            <h3 class="section-subheading text-muted">All products which inspired new users.
+                              </h3>
                         </div>
                     </div>
-
-
-                    <!--Search filter-->
-                    <form className ="border border-primary p-3" onkeyup ="searchTable()">
-                        <input type ="text" id ="myInput"  name = "myInput" placeholder="Fitness/Nutrition..." />
-                        <button  >Search</button>
-                    </form>
-                    <br>
-
 
                     <!--    <div class="container-fluid" id="navbarid">
                         </div>
@@ -133,6 +124,9 @@
                                             <th scope="col" class="text-center">Price</th>
                                             <th scope="col" class="text-center">Short Description</th>
                                             <th scope="col" class="text-center">Details</th>
+                                             <th scope="col" class="text-center">Duration</th>
+                                              <th scope="col" class="text-center">Category</th>
+                                            
                                             <th scope="col" class="text-center"> Actions</th>
                                         </tr>
                                     </thead>
@@ -143,20 +137,25 @@
                                                 <td scope="col" class="text-center">${product.price}</td>
                                                 <td scope="col" class="text-center">${product.shortDescription}</td>
                                                 <td scope="col" class="text-center">${product.details}</td>
-
-                                                <td align="right">
-                                                    <a href="<c:url value='${purchaseurl}/${product.productId}'/>" class="btn btn-warning">
-                                                        <span class="fa fa-shopping-cart"></span>Purchase
-                                              </a>
-                                        
-
-                                                </td>
+                                                  <td scope="col" class="text-center">${product.duration}</td>
+                                                   <td scope="col" class="text-center">${product.category}</td>
+                                               <td align="right">
+                                             <a href="<c:url value='${editurl}/${user.id}' />"class="btn btn-warning">
+                                                        <span class="fa fa-pencil"></span>Update</a> 
+                                                        <a href="<c:url value='${deleteurl}/${user.id}' />"class="btn btn-danger">
+                                                        <span class="fa fa-trash"></span>Delete
+                                                    </a>
+                                       
+                                        </td>
                                             </tr>
                                         </c:forEach>
 
                                     </tbody>
 
-                                </table>
+                                 </table>
+                                  <a href="<c:url value='/users/${newurl}' />" class="btn btn-info">
+      <span class="fa fa-plus"></span>ADD</a>
+  
                                 
 
                             </div>

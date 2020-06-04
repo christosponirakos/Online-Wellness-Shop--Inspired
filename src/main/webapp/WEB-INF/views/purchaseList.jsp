@@ -114,10 +114,6 @@
 
                             </div>
 
-<a href="<c:url value='/new' />"
-
-
-
                         </div>
                     </div>
                 </section>
