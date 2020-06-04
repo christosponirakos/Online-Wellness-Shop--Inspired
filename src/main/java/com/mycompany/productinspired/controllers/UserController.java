@@ -65,7 +65,7 @@ public class UserController {
         if (userService.save(user)) {
 
             view.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " registered successfully");
-            return ("userList");
+            return ("redirect:/users/list");
         } else {
 
             view.addAttribute("message", new String("Something went wrong! Please try again! "));
@@ -131,20 +131,53 @@ public class UserController {
            
            // int id1 = userService.getUserByUsername(username).getUserId();
            // User user = userService.findById(id1);
-       // List<Purchase> purchases = purchaseService.getPurchasesForUserById(51);
-       // model.addAttribute("purchases", purchases);
+       List<Purchase> purchases = purchaseService.getPurchasesForUserById(51);
+        model.addAttribute("purchases", purchases);
          if (purchaseService.deletePurchaseById(id)) {
             model.addAttribute("msg", new String("User is deleted Successfully!"));
         } else {
             model.addAttribute("msg", new String("User has not been Deleted!"));
         }
         return ("redirect:/users/51");
+       
+}
+    
+     @RequestMapping(value={"purchases/edit/{id}"}, method=RequestMethod.GET)
+    public String editPurchasesByUserId(ModelMap model, @PathVariable int id){
+           // String username = appService.getPrincipal();    //Η appService εχει μονο την getPrincipal= η οποια θα μας γυρναει το username.
+           
+           // int id1 = userService.getUserByUsername(username).getUserId();
+           // User user = userService.findById(id1);
+       List<Purchase> purchases = purchaseService.getPurchasesForUserById(51);
+        model.addAttribute("purchases", purchases);  
+       
+        model.addAttribute("updateurl", updateurl);
+        return ("redirect:/users/51");
+    }
+         
+     @RequestMapping(value={"purchases/update/{id}"}, method=RequestMethod.GET)
+    public String updatePurchasesByUserId(@Valid Purchase purchase, BindingResult result, ModelMap view, @PathVariable int id){
+           // String username = appService.getPrincipal();    //Η appService εχει μονο την getPrincipal= η οποια θα μας γυρναει το username.
+           
+           // int id1 = userService.getUserByUsername(username).getUserId();
+           // User user = userService.findById(id1);
+        List<Purchase> purchases = purchaseService.getPurchasesForUserById(51);
+        view.addAttribute("purchases", purchases);     
+         if (result.hasErrors()) {
+            purchase.setId(id);
+
+            return ("editpurchase");
+
+        }
+       purchaseService.updatePurchase(purchase);
+      
+        return ("redirect:/users/51");
+//        view.addAttribute("msg", new String(""));
+//        return("redirect:/list");
         
            
 }
     
-    
-    
-    
-    
 }
+    
+

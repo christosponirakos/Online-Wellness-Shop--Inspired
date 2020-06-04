@@ -96,7 +96,7 @@
                                 <div class="form-group col-md-12">
                                     <label class="col-md-12 control-lable" for="password">Password</label>
                                     <div class="col-md-12">
-                                        <form:input type="number" path="password" id="password" class="form-control input-sm"/>
+                                        <form:input type="password" path="password" id="password" class="form-control input-sm"/>
                                         <form:errors path="password" cssStyle="color: #ff0000;"/>
                                     </div>
                                 </div>
