@@ -2,7 +2,7 @@
 <html>
 
     <head>
-       <%@include file="head.jsp" %>
+        <%@include file="head.jsp" %>
         <title>User Registration Form</title>
         <link href="<c:url value='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' />" rel="stylesheet"></link>
         <style type="text/css">
@@ -111,92 +111,63 @@
                         <div class="col-sm-12 col-md-6">
                             <label class="sr-only" for="firstName">Username</label>
                             <form:input type="text" placeholder="Username" path="userName" id="userName" class="form-control" required="true"/>
-                           
-                                <form:errors path="userName" cssStyle="color: #ff0000;"/>
-                           
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <label class="sr-only" for="lastName">First name</label>
-                            <form:input type="text" path="firstName" id="firstName" class="form-control" placeholder="First Name" required="true" />
-                          
-                                <form:errors path="firstName" cssStyle="color: #ff0000;"/>
-                            
+                            <form:errors path="userName" cssStyle="color: #ff0000;"/>
                         </div>
                     </div>
-                </div>
-                     <div class="col-sm-12 col-md-6">
-                            <label class="sr-only" for="lastName">Last name</label>
-                            <form:input type="text" path="lastName" id="lastName" class="form-control" placeholder="Last Name" required="true" />
-                          
-                                <form:errors path="lastName" cssStyle="color: #ff0000;"/>
-                            
-                        </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label class="sr-only" for="lastName">First name</label>
+                        <form:input type="text" path="firstName" id="firstName" class="form-control" placeholder="First Name" required="true" />
+                        <form:errors path="firstName" cssStyle="color: #ff0000;"/>
                     </div>
                 </div>
-             
-                <div class="form-group">
-                    <label class="sr-only" for="email">Email</label>
-                    <form:input type="email" name="email" path="email" id="email" class="form-control" placeholder="Email" required="true"/>
-                  
-                        <form:errors path="email" cssStyle="color: #ff0000;"/>
-                       
-                    </div>
-        </div>
+                <div class="col-sm-12 col-md-6">
+                    <label class="sr-only" for="lastName">Last name</label>
+                    <form:input type="text" path="lastName" id="lastName" class="form-control" placeholder="Last Name" required="true" />
+                    <form:errors path="lastName" cssStyle="color: #ff0000;"/>
                 </div>
-   
-                <div class="form-group">
-                    <label class="sr-only" for="email">Address</label>
-                    <form:input type="text" name="address" path="address" id="address" class="form-control" placeholder="Address" required="true"/>
-                  
-                        <form:errors path="email" cssStyle="color: #ff0000;"/>
-                       
-                    </div>
-        </div>
-                </div>
-   
-                <div class="form-group">
-                    <label class="sr-only" for="email">Telephone</label>
-                    <form:input type="number" name="telephone" path="telephone" id="telephone" class="form-control" placeholder="Telephone" required="true"/>
-                  
-                        <form:errors path="telephone" cssStyle="color: #ff0000;"/>
-                       
-                    </div>
-        </div>
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="password">Password</label>
-                    <form:input type="password" path="password" id="password" class="form-control" placeholder="Password" required="true" />
-                   
-                        <form:errors path="password"cssStyle="color: #ff0000;"/>
-                   
-                </div>
-</div>
-</div>
-                <!--                <div class="form-group">
-                                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"
-                                           required="required">
-                                </div>-->
-                <div class="form-group">
-                    <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a
-                            href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-                </div>
-                <div class="form-group">
-                    <c:choose>
-                        <c:when test="${edit}">
-                            <input type="submit" value="Save new info" class="btn btn-warning btn-lg btn-block"/>
-                        </c:when>
-                        <c:otherwise>
-                            <input type="submit" value="Register Now" class="btn btn-warning btn-lg btn-block"/>
-                        </c:otherwise>
-                    </c:choose>
-                </div>
-                <div class="text-center " style="color: #5cb85c">Already have an account? <a href="/Wellness/login">Sign in</a></div>
-                <div class="text-center " style="color: #5cb85c"><a href="/Wellness/">Home</a></div>
-            </form:form>
-        </div>
-        <br>
-        <br>
-<%@include file="footer.jsp" %>
-        <%@include file="scripts.jsp" %>
-    </body>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <label class="sr-only" for="email">Email</label>
+                <form:input type="email" name="email" path="email" id="email" class="form-control" placeholder="Email" required="true"/>
+                <form:errors path="email" cssStyle="color: #ff0000;"/>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <label class="sr-only" for="email">Address</label>
+                <form:input type="text" name="address" path="address" id="address" class="form-control" placeholder="Address" required="true"/>
+                <form:errors path="email" cssStyle="color: #ff0000;"/>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <label class="sr-only" for="email">Telephone</label>
+                <form:input type="number" name="telephone" path="telephone" id="telephone" class="form-control" placeholder="Telephone" required="true"/>
+                <form:errors path="telephone" cssStyle="color: #ff0000;"/>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <label class="sr-only" for="password">Password</label>
+                <form:input type="password" path="password" id="password" class="form-control" placeholder="Password" required="true" />
+                <form:errors path="password" cssStyle="color: #ff0000;"/>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a
+                        href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+            </div>
+            <div class="form-group">
+                <c:choose>
+                    <c:when test="${edit}">
+                        <input type="submit" value="Save new info" class="btn btn-warning btn-lg btn-block"/>
+                    </c:when>
+                    <c:otherwise>
+                        <input type="submit" value="Register Now" class="btn btn-warning btn-lg btn-block"/>
+                    </c:otherwise>
+                </c:choose>
+            </div>
+            <div class="text-center " style="color: #5cb85c">Already have an account? <a href="/Wellness/login">Sign in</a></div>
+            <div class="text-center " style="color: #5cb85c"><a href="/Wellness/">Home</a></div>
+        </form:form>
+    </div>
+    <br>
+    <br>
+    <%@include file="footer.jsp" %>
+    <%@include file="scripts.jsp" %>
+</body>
 </html>

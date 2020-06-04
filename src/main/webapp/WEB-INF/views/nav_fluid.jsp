@@ -146,10 +146,10 @@
       
     </button>
     <div class="dropdown-menu">
-       <a class="dropdown-item" href="/Wellness/admin/profile">Profile</a>
-      <a class="dropdown-item" href="/Wellness/admin/users/list">Users</a>
-     <a class="dropdown-item" href="/Wellness/admin/prodcucts/list">Products</a>
-                    <a class="dropdown-item" href="/Wellness/admin/purchases/list">Purchases</a>
+       <a class="dropdown-item" href="/Wellness/admin">Profile</a>
+      <a class="dropdown-item" href="/Wellness/users/list">Users</a>
+     <a class="dropdown-item" href="/Wellness/products/list">Products</a>
+                    <a class="dropdown-item" href="/Wellness/purchases/list">Purchases</a>
     </div>
   </div> 
              <!--       <sec:authorize access="hasRole('ADMIN') or hasRole('USER')"> --> 
