@@ -50,12 +50,11 @@ public class ProductsController {
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
     public String saveProduct(@ModelAttribute("product") @Validated Product product, BindingResult bindingResult, ModelMap view) {
-
         if (bindingResult.hasErrors()) {
             return ("newproduct");
         }
         if (productsService.saveProduct(product)) {
-            view.addAttribute("succes", "You have successfully added a new product");
+            view.addAttribute("success", "You have successfully added a new product");
             return ("productList");
         } else {
             view.addAttribute("message", new String("Something wrong!Product was not added please try again!"));
