@@ -24,18 +24,18 @@ public class UserServiceImpl implements IUserService {
     public User findById(int id) {
         return dao.findById(id);
     }
-//
-//    public boolean save(Trainer trainer) {
-//        return dao.save(trainer);   
-//    }
-//
-//    public boolean delete(int id) {
-//        return dao.delete(id);
-//    }
-//
-//    public boolean update(Trainer trainer) {
-//        return dao.update(trainer);
-//    }
+
+    public boolean save(User user) {
+        return dao.save(user);
+    }
+
+    public boolean delete(int id) {
+        return dao.delete(id);
+    }
+
+    public boolean update(User user) {
+        return dao.update(user);
+    }
 
    
 }
