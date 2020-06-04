@@ -68,7 +68,7 @@
      
     </div>
   </div>
-
+            </ul>
 
 <!--
                 <sec:authorize access="hasRole('ADMIN')">
@@ -85,26 +85,31 @@
                     </li>
                 </sec:authorize>
 
-            </ul>
+            </ul>-->
 
           
-            <!--Profile button 
-            <button type="button" class="btn">
+          <div class="dropdown dropleft float-left">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+      
+    </button>
+    <div class="dropdown-menu">
+       <a class="dropdown-item" href="/Wellness/admin/profile">Profile</a>
+      <a class="dropdown-item" href="/Wellness/admin/users/list">Users</a>
+     <a class="dropdown-item" href="/Wellness/admin/prodcucts/list">Products</a>
+                    <a class="dropdown-item" href="/Wellness/admin/purchases/list">Purchases</a>
+    </div>
+  </div>
+         <!--   <button type="button" class="btn">
                 <span class="glyphicon glyphicon-cog"></span>
                 <span class="caret"></span>
-                <sec:authorize access="hasRole('ADMIN')">
-                    <a href="/wellness/admin/profile">
-                        <i class="fas fa-user icon"></i>
-                    </a>
-                </sec:authorize>
-                <sec:authorize access="!hasRole('ADMIN')">
-                    <a href="/wellness/user/profile">
-                        <i class="fas fa-user icon"></i>
-                    </a>
-                </sec:authorize>
+                <div class="dropdown-menu"></div>
+                    
+                       <i class="fas fa-user icon"></i>
+                   
+                    
+               
 
-
-            </button>
+            </button>-->
 
 
             <!-- Register / Login dropdown 

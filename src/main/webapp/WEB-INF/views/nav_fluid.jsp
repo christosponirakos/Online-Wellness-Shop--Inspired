@@ -121,7 +121,37 @@
     </div>
   </div>
 
-           
+          </ul>
+
+<!--
+                <sec:authorize access="hasRole('ADMIN')">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/Wellness/admin/customers">Customers</a>
+                            <a class="dropdown-item" href="/Wellness/admin/orders/pending">Pending Orders</a>
+                            <a class="dropdown-item" href="/Wellness/admin/orders/done">Completed orders</a>
+                        </div>
+                    </li>
+                </sec:authorize>
+
+            </ul>-->
+
+          
+          <div class="dropdown dropleft float-left">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+      
+    </button>
+    <div class="dropdown-menu">
+       <a class="dropdown-item" href="/Wellness/admin/profile">Profile</a>
+      <a class="dropdown-item" href="/Wellness/admin/users/list">Users</a>
+     <a class="dropdown-item" href="/Wellness/admin/prodcucts/list">Products</a>
+                    <a class="dropdown-item" href="/Wellness/admin/purchases/list">Purchases</a>
+    </div>
+  </div> 
              <!--       <sec:authorize access="hasRole('ADMIN') or hasRole('USER')"> --> 
                         
              <!--       </sec:authorize>
