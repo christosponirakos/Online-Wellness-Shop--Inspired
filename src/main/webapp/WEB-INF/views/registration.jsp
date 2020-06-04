@@ -108,44 +108,53 @@
                 <p class="hint-text">Create your account. It's free and only takes a minute.</p>
                 <div class="form-group">
                     <div class="row">                        
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-12">
                             <label class="sr-only" for="firstName">Username</label>
                             <form:input type="text" placeholder="Username" path="userName" id="userName" class="form-control" required="true"/>
                             <form:errors path="userName" cssStyle="color: #ff0000;"/>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                         <div class="row">   
+                    <div class="col-sm-12 col-md-12">
                         <label class="sr-only" for="lastName">First name</label>
                         <form:input type="text" path="firstName" id="firstName" class="form-control" placeholder="First Name" required="true" />
                         <form:errors path="firstName" cssStyle="color: #ff0000;"/>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
+                     <div class="row">   
+                <div class="col-sm-12 col-md-12">
                     <label class="sr-only" for="lastName">Last name</label>
                     <form:input type="text" path="lastName" id="lastName" class="form-control" placeholder="Last Name" required="true" />
                     <form:errors path="lastName" cssStyle="color: #ff0000;"/>
                 </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
+                </div>
+              <div class="row">  
+            <div class="col-sm-12 col-md-12">
                 <label class="sr-only" for="email">Email</label>
                 <form:input type="email" name="email" path="email" id="email" class="form-control" placeholder="Email" required="true"/>
                 <form:errors path="email" cssStyle="color: #ff0000;"/>
             </div>
-            <div class="col-sm-12 col-md-6">
+              </div>
+            <div class="row">  
+            <div class="col-sm-12 col-md-12">
                 <label class="sr-only" for="email">Address</label>
                 <form:input type="text" name="address" path="address" id="address" class="form-control" placeholder="Address" required="true"/>
                 <form:errors path="email" cssStyle="color: #ff0000;"/>
             </div>
-            <div class="col-sm-12 col-md-6">
+            </div>
+            <div class="row">  
+            <div class="col-sm-12 col-md-12">
                 <label class="sr-only" for="email">Telephone</label>
                 <form:input type="number" name="telephone" path="telephone" id="telephone" class="form-control" placeholder="Telephone" required="true"/>
                 <form:errors path="telephone" cssStyle="color: #ff0000;"/>
             </div>
-            <div class="col-sm-12 col-md-6">
+            </div>
+            <div class="row">  
+            <div class="col-sm-12 col-md-12">
                 <label class="sr-only" for="password">Password</label>
                 <form:input type="password" path="password" id="password" class="form-control" placeholder="Password" required="true" />
                 <form:errors path="password" cssStyle="color: #ff0000;"/>
+            </div>
             </div>
             <div class="form-group">
                 <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a
