@@ -133,6 +133,8 @@
                                             <th scope="col" class="text-center">Price</th>
                                             <th scope="col" class="text-center">Short Description</th>
                                             <th scope="col" class="text-center">Details</th>
+                                            <th scope="col" class="text-center">Duration</th>
+                                            <th scope="col" class="text-center">Category</th>
                                             <th scope="col" class="text-center"> Actions</th>
                                         </tr>
                                     </thead>
@@ -143,21 +145,27 @@
                                                 <td scope="col" class="text-center">${product.price}</td>
                                                 <td scope="col" class="text-center">${product.shortDescription}</td>
                                                 <td scope="col" class="text-center">${product.details}</td>
-
+                                                <td scope="col" class="text-center">${product.duration}</td>
+                                                <td scope="col" class="text-center">${product.category}</td>
+                                               
                                                 <td align="right">
-                                                    <a href="<c:url value='${purchaseurl}/${product.productId}'/>" class="btn btn-warning">
-                                                        <span class="fa fa-shopping-cart"></span>Purchase
-                                              </a>
-                                        
+
+                                                    <a href="<c:url value='${editurl}/${product.productId}'/>" class="btn btn-warning">
+                                                        <span class="fa fa-pencil"></span>Edit
+                                                    </a>
+                                                    <a href="<c:url value='${deleteurl}/${product.productId}'/>" class="btn btn-danger">
+                                                        <span class="fa fa-trash"></span>Delete
+                                                    </a>
 
                                                 </td>
                                             </tr>
                                         </c:forEach>
 
                                     </tbody>
-
                                 </table>
-                                
+                                <a href="<c:url value='/products/${newurl}' />" class="btn btn-info">
+                                    <span class="fa fa-plus"></span>ADD</a>
+
 
                             </div>
 
@@ -184,3 +192,4 @@
         <%@include file="scripts.jsp" %>
     </body>
 </html>
+
