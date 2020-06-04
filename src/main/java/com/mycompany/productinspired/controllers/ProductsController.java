@@ -33,7 +33,8 @@ public class ProductsController {
     public String getAllProducts(ModelMap view) {
         List<Product> products = productsService.getAllProducts();
         view.addAttribute("products", products);
-
+        view.addAttribute("editurl", editurl);
+        view.addAttribute("deleteurl", deleteurl);
         view.addAttribute("newurl", newurl);
         return ("productList");
 
@@ -63,7 +64,7 @@ public class ProductsController {
         return ("redirect:/products/list");
     }
 
-    @RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editProduct(ModelMap view, @PathVariable int id) {
         Product product = productsService.findProductById(id);
         view.addAttribute("product", product);
@@ -72,16 +73,12 @@ public class ProductsController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public String updateProduct(@Valid Product product, BindingResult result, ModelMap view, @PathVariable int id) {
-        if (result.hasErrors()) {
-            product.setProductId(id);
-            return ("editproduct");
-        }
+    public String updateProduct(Product product, ModelMap view) {
         productsService.updateProduct(product);
-        view.addAttribute("success", "Product " + product.getTitle() +  " updated successfully");
+        view.addAttribute("success", "Product " + product.getTitle() + " updated successfully");
         return ("redirect:/products/list");
     }
-    
+
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteProduct(ModelMap view, @PathVariable int id) {
         if (productsService.deleteProductById(id)) {
@@ -91,5 +88,5 @@ public class ProductsController {
         }
         return "redirect:/products/list";
     }
-    
+
 }

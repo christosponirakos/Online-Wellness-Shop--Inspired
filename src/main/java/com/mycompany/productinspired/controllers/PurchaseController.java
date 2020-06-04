@@ -42,7 +42,7 @@ public class PurchaseController {
         return ("purchaseList");
     }
 
-    @RequestMapping("/new")
+    @RequestMapping(value ="/new", method = RequestMethod.GET)
     public String newPurchase(ModelMap view) {
         Purchase purchase = new Purchase();
         view.addAttribute("purchase", purchase);
