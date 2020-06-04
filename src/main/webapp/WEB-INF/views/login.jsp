@@ -6,11 +6,13 @@
   
         <style type>
             .login-form {
+                
                 width: 340px;
                 margin: 50px auto;
             }
             .login-form form {
                 margin-bottom: 15px;
+                
                 background: #f7f7f7;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
                 padding: 30px;
@@ -28,9 +30,10 @@
                 font-weight: bold;
             }
             body {
-                
+                background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
                 height: 500px;
-                background-color:#f7ecb5
+                
               
             }
          

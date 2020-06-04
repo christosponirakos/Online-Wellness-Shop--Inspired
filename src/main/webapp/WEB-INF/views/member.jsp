@@ -18,7 +18,8 @@ header.masthead {
             text-align: center;
             color: rgb(13, 27, 32);
             background-image: none;
-            background-color: #fed136;
+           background: rgb(36,0,5);
+background: linear-gradient(90deg, rgba(36,0,5,1) 0%, rgba(121,9,15,1) 36%, rgba(85,196,218,1) 77%);
             background-repeat: no-repeat;
             background-attachment: scroll;
             background-position: center center;

@@ -176,6 +176,8 @@
     </div>
     <br>
     <br>
+        </div>
+    
     <%@include file="footer.jsp" %>
     <%@include file="scripts.jsp" %>
 </body>

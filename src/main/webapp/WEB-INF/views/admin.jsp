@@ -8,7 +8,8 @@
 
         <style>
             .profile{
-                background: -webkit-linear-gradient(left, #e9d179, #ff1e00);
+                background: rgb(250,224,23);
+background: radial-gradient(circle, rgba(250,224,23,1) 0%, rgba(231,123,115,1) 48%, rgba(223,68,20,1) 100%);
                 margin-top: 3%;
                 padding: 3%;
                 text-align: center;
@@ -115,7 +116,7 @@
             <div class="row">
                 <div class="col-md-3 profile-left">
                     <img src="${pageContext.request.contextPath}/static/img/wellness.png" alt=""/>
-                    <h3>Welcome(Admin)</h3>
+                    <h3>Welcome Admin</h3>
                     <p>Check your stats!</p>
 
                 </div>
