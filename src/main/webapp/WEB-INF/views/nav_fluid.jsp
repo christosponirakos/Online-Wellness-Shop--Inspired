@@ -98,7 +98,7 @@
     <div class="dropdown-menu">
       <a class="dropdown-item" href="/Wellness/register">Register now</a>
       <a class="dropdown-item" href="/Wellness/login">Login</a>
-      <a class="dropdown-item" href="/Wellness/Chat">Chat</a>
+      <a class="dropdown-item" href="/Wellness/member">Members' sections</a>
     </div>
   </div>
 

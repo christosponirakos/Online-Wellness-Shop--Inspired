@@ -54,7 +54,12 @@ public class AppController {
         model.addAttribute("pagetitle", "About");
         return "about";
     }
-
+    @RequestMapping(value = {"/member"}, method = RequestMethod.GET)
+    public String goMember(ModelMap model) {
+        //model.addAttribute("loggedinuser", appService.getPrincipal());
+        model.addAttribute("pagetitle", "Members' section");
+        return "member";
+    }
 
 //    /**
 //     * This method will provide the medium to add a new user.
