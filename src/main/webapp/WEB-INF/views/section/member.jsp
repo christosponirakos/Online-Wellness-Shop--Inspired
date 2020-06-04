@@ -78,8 +78,7 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Are you eating enough proteins?</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                      <p class="card-text">Check how to calculate your needs and your daily amount.</p>
                        <a href = "${pageContext.request.contextPath}/Wellness/proteins" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
@@ -91,8 +90,7 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Veggie Burger</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                      <p class="card-text">Cook with us today. Perfect for vegetarians and not only!</p>
                       <a href = "boxing.html" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
@@ -104,8 +102,7 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Keto diet</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                      <p class="card-text">Step by step guide to what is this popular diet!</p>
                       <a href = "boxing.html" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
@@ -125,8 +122,7 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Eating Well as You Age</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                      <p class="card-text">Getting older doesnt mean that life is not full of pleasures or positive energy! Check out what to rememeber!</p>
                      <a href = "boxing.html" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
@@ -138,9 +134,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Post and pre workout nutrition</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href = "boxing.html" class ="btn btn-primary">Discover</a>
+                      <p class="card-text">Foods you should avoid and those which are the best for your body before and after workout!</p>
+                      <a href = "${pageContext.request.contextPath}/workout" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -151,9 +146,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">What happens to your boyd when you quit sugar?</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href = "boxing" class ="btn btn-primary">Discover</a>
+                      <p class="card-text">Heard about the benefits? Try it for yourself!</p>
+                      <a href = "${pageContext.request.contextPath}/boxing" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -219,9 +213,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Yoga</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href = "boxing.html" class ="btn btn-primary">Discover</a>
+                      <p class="card-text">Are you new to yoga? Here's a list of 10 positions perfect for you!</p>
+                      <a href = "${pageContext.request.contextPath}/yoga" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -234,7 +227,7 @@ header.masthead {
                       <h4 class="card-title">10 exercises for killer abs</h4>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                      <a href = "abs.html" class="btn btn-primary">Discover</a>
+                      <a href = "${pageContext.request.contextPath}/abs" class="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -245,9 +238,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">30 min full body workout</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href = "fullbody.html" class = "btn btn-primary">Discover</a>
+                      <p class="card-text">Enjoy a specially prepared program for you!</p>
+                      <a href = "${pageContext.request.contextPath}/fullbody" class = "btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -266,9 +258,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title"> Killer Workout Torches Calories ? About 500 calories in 45 Minutes</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href = "calories.html" class = "btn btn-primary">Discover</a>
+                      <p class="card-text">EXCLUSIVE! Train with us not even for an hour and see results!</p>
+                      <a href = "${pageContext.request.contextPath}/calories" class = "btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -279,9 +270,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">30-DAY BULLETPROOF BODY WORKOUT PLAN</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href ="plan.html" class="btn btn-primary">Discover</a>
+                      <p class="card-text">This is a great recipe for workout routine which helps to achieve your goals!</p>
+                      <a href ="${pageContext.request.contextPath}/plan" class="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
@@ -292,9 +282,8 @@ header.masthead {
                       alt="Card image cap">
                     <div class="card-body">
                       <h4 class="card-title">Boxing tips from our experts</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <a href = "boxing.html" class ="btn btn-primary">Discover</a>
+                      <p class="card-text">Follow them and improve your technique from day one!</p>
+                      <a href = "${pageContext.request.contextPath}/boxing" class ="btn btn-primary">Discover</a>
                     </div>
                   </div>
                 </div>
