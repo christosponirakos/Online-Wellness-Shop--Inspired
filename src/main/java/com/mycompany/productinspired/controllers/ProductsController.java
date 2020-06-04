@@ -95,7 +95,7 @@ public class ProductsController {
        
         model.addAttribute("pagetitle", "Nutrition Products");
        // model.addAttribute("loggedinuser", appService.getPrincipal());        
-        return "productList";
+        return "productListUser";
     }
     
     
@@ -107,7 +107,7 @@ public class ProductsController {
        
         model.addAttribute("pagetitle", "Nutrition Products");
        // model.addAttribute("loggedinuser", appService.getPrincipal());        
-        return "productList";
+        return "productListUser";
     }
     
     

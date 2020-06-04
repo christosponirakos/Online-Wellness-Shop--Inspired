@@ -112,7 +112,7 @@
                             <label class="sr-only" for="firstName">Username</label>
                             <form:input type="text" placeholder="Username" path="userName" id="userName" class="form-control" required="true"/>
                            
-                                <form:errors path="customer.fname" cssStyle="color: #ff0000;"/>
+                                <form:errors path="userName" cssStyle="color: #ff0000;"/>
                            
                         </div>
                         <div class="col-sm-12 col-md-6">

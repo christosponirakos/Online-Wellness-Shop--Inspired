@@ -2,6 +2,8 @@ package com.mycompany.productinspired.controllers;
 
 
 import com.mycompany.productinspired.dao.IProductDao;
+import com.mycompany.productinspired.entities.User;
+import com.mycompany.productinspired.services.IUserService;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,10 +23,14 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 
 import java.util.ArrayList;
+import org.springframework.validation.annotation.Validated;
 
 @Controller
 @RequestMapping("/")
 public class AppController {
+    
+    @Autowired
+    IUserService userService;
     
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String goHome(ModelMap model) {
@@ -175,4 +181,44 @@ public class AppController {
 //        return authenticationTrustResolver.isAnonymous(authentication);
 //    }
 //
+
+    
+     @RequestMapping(value = {"/register"}, method = RequestMethod.GET)
+    public String goRestration(ModelMap model) {
+        User user = new User();
+        model.addAttribute("user", user);
+        model.addAttribute("pagetitle", "Inspired");
+      
+        return "registration";
+    }
+
+
+ @RequestMapping(value = {"/register"}, method = RequestMethod.POST)
+    public String saveUser(@ModelAttribute("user") @Validated User user, BindingResult bindingResult, ModelMap view) {
+
+        if (bindingResult.hasErrors()) {
+            return "registration";
+        }
+
+        if (userService.save(user)) {
+
+            view.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " registered successfully");
+            return ("redirect:login");
+        } else {
+
+            view.addAttribute("message", new String("Something went wrong! Please try again! "));
+        }
+       
+        return ("registration");
+    }
+
+
+
+
+
+
+
+
+
+
 }
