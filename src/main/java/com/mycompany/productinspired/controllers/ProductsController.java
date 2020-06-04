@@ -88,5 +88,30 @@ public class ProductsController {
         }
         return "redirect:/products/list";
     }
-
+    
+    @RequestMapping(value = {"/nutrition"}, method = RequestMethod.GET)
+    public String getNutritionProducts(ModelMap model) {
+        List<Product> nutritionProducts=productsService.getProductByCategory("nutrition");
+        model.addAttribute("nutritionProducts", nutritionProducts);
+       
+        model.addAttribute("pagetitle", "Nutrition Products");
+       // model.addAttribute("loggedinuser", appService.getPrincipal());        
+        return "nutritionProducts";
+    }
+    
+    
+    
+      @RequestMapping(value = {"/fitness"}, method = RequestMethod.GET)
+    public String getFitnessProducts(ModelMap model) {
+        List<Product> fitnessProducts=productsService.getProductByCategory("fitness");
+        model.addAttribute("fitnessProducts", fitnessProducts);
+       
+        model.addAttribute("pagetitle", "Nutrition Products");
+       // model.addAttribute("loggedinuser", appService.getPrincipal());        
+        return "fitnessProducts";
+    }
+    
+    
+    
+    
 }

@@ -20,10 +20,10 @@ public class ProductsServiceImpl implements IProductsService {
         return dao.getAllProducts();
     }
 
-//    @Override
-//    public List<Product> getProductByCategory(String category) {
-//        return dao.getProductByCategory(category);
-//    }
+    @Override
+    public List<Product> getProductByCategory(String category) {
+        return dao.getProductByCategory(category);
+    }
 
     @Override
     public Product findProductById(int id) {

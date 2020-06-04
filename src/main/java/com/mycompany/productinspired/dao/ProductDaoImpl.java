@@ -22,14 +22,14 @@ public class ProductDaoImpl extends AbstractDao<Integer,Product> implements IPro
     
     
 
-//    @Override
-//    public List<Product> getProductByCategory(String category) {
-//        Criteria crit = createEntityCriteria();
-//        crit.add(Restrictions.eq("category", category));
-//	List<Product> list = (List<Product>)crit.list();
-//
-//        return list;
-//    }
+    @Override
+    public List<Product> getProductByCategory(String category) {
+        Criteria crit = createEntityCriteria();
+        crit.add(Restrictions.eq("category", category));
+	List<Product> list = (List<Product>)crit.list();
+
+        return list;
+    }
 
     @Override
     public Product findProductById(int id) {

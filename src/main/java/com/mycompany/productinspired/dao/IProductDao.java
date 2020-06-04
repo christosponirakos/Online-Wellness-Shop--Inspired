@@ -9,7 +9,7 @@ public interface IProductDao {
     
     public List<Product> getAllProducts();
     
-   // public List<Product> getProductByCategory(String category);
+    public List<Product> getProductByCategory(String category);
     
     public Product findProductById(int id);
     
