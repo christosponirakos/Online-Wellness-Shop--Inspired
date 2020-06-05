@@ -51,11 +51,11 @@ public class Purchase implements Serializable {
 
     private short pending;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "purchase_product", 
-             joinColumns = { @JoinColumn(name = "purchase_id") }, 
-             inverseJoinColumns = { @JoinColumn(name = "product_id") })
-    private List<Product> products = new ArrayList<Product>();
+//     @ManyToMany(cascade = CascadeType.ALL)
+//     @JoinTable(name = "purchase_product", 
+//              joinColumns = { @JoinColumn(name = "purchase_id") }, 
+//              inverseJoinColumns = { @JoinColumn(name = "product_id") })
+//     private List<Product> products = new ArrayList<Product>();
     
     
     public Purchase() {
