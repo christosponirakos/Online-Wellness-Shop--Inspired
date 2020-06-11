@@ -1,7 +1,7 @@
-#online Wellenss Shop -Inspired
-##A three tier architecture web app
+# Online Wellenss Shop -Inspired  
+## A three tier architecture web app  
 
-###Tech stack
+### Tech stack  
 -Java 8/JEE
 -Spring MVC
 -Hibernate
